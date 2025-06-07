@@ -1,0 +1,136 @@
+.shadow-custom {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #fffcf5 0%, #fff9eb 100%);
+  }
+  
+  .bg-gradient-cta {
+    background: linear-gradient(135deg, #6d1f2f 0%, #6c1919 100%);
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .mobile-menu {
+    display: none;
+  }
+  
+  .mobile-menu.active {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+  }
+  
+  /* Improved image containers */
+  .product-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    padding: 1rem;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .gallery-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-4px);
+  }
+  
+  .gallery-image-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 0.5rem;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Testimonials alternating layout for mobile */
+  @media (max-width: 767px) {
+    .testimonial-card {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .testimonial-card:nth-child(even) .testimonial-text {
+      order: 1;
+    }
+  
+    .testimonial-card:nth-child(even) .testimonial-image {
+      order: 2;
+    }
+  
+    .testimonial-card:nth-child(odd) .testimonial-text {
+      order: 2;
+    }
+  
+    .testimonial-card:nth-child(odd) .testimonial-image {
+      order: 1;
+    }
+  }
+  
+  /* Better responsive images */
+  @media (max-width: 640px) {
+    .product-image-container {
+      max-width: 100%;
+      padding: 0.75rem;
+    }
+  
+    .gallery-image-container {
+      height: 240px;
+      padding: 0.25rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .gallery-image-container {
+      height: 320px;
+    }
+  }
+  

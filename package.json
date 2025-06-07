@@ -1,0 +1,16 @@
+{
+  "name": "tatiarte-canecas",
+  "version": "1.0.0",
+  "description": "Landing page para canecas personalizadas",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  }
+} 

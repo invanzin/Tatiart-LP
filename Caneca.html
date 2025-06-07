@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MugCraft - Canecas Personalizadas</title>
+    <meta name="description" content="Crie canecas únicas e personalizadas para presentes, empresas e eventos especiais.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="main.js"></script>
+    
+    <script src="tailwind.config.js"></script>
+    
+    <style>
+        .shadow-custom {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .bg-gradient-hero {
+            background: linear-gradient(135deg, #FFFCF5 0%, #FFF9EB 100%);
+        }
+        
+        .bg-gradient-cta {
+            background: linear-gradient(135deg, #6D1F2F 0%, #6C1919 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+        }
+
+        /* Testimonials alternating layout for mobile */
+        @media (max-width: 767px) {
+            .testimonial-card {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .testimonial-card:nth-child(even) .testimonial-text {
+                order: 1;
+            }
+            
+            .testimonial-card:nth-child(even) .testimonial-image {
+                order: 2;
+            }
+            
+            .testimonial-card:nth-child(odd) .testimonial-text {
+                order: 2;
+            }
+            
+            .testimonial-card:nth-child(odd) .testimonial-image {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-beige-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-beige-200 bg-beige-50/95 backdrop-blur">
+        <div class="container mx-auto flex h-16 items-center justify-between px-4">
+            <div class="flex items-center space-x-2">
+                <div class="flex items-center justify-center w-8 h-8 bg-burgundy-800 rounded-lg">
+                    <i data-lucide="coffee" class="h-5 w-5 text-beige-50"></i>
+                </div>
+                <span class="text-xl font-bold font-playfair text-burgundy-900">MugCraft</span>
+            </div>
+
+            <nav class="desktop-nav hidden md:flex items-center space-x-6">
+                <a href="#galeria" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Galeria
+                </a>
+                <a href="#depoimentos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Depoimentos
+                </a>
+                <a href="#precos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Preços
+                </a>
+                <a href="#contato" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Contato
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:inline-flex text-sm font-medium text-burgundy-800 hover:text-burgundy-900 px-3 py-2">
+                    Entrar
+                </button>
+                <button class="bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 px-4 py-2 rounded-md text-sm font-medium">
+                    Quero Minha Caneca
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i data-lucide="menu" class="h-4 w-4"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-beige-50 border-t border-beige-200">
+            <nav class="container mx-auto px-4 py-4 space-y-2">
+                <a href="#galeria" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Galeria</a>
+                <a href="#depoimentos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Depoimentos</a>
+                <a href="#precos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Preços</a>
+                <a href="#contato" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-hero">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="flex flex-col justify-center space-y-6">
+                        <div class="space-y-4">
+                            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl font-playfair text-burgundy-900">
+                                Canecas que Contam
+                                <span class="block text-burgundy-700">Histórias Únicas</span>
+                            </h1>
+                            <p class="max-w-2xl text-burgundy-700 text-xl leading-relaxed">
+                                Transforme momentos especiais em lembranças eternas. Cada caneca é 100% personalizada e feita com
+                                amor para emocionar quem você ama.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-3 sm:flex-row">
+                            <button class="h-14 px-8 bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 shadow-lg text-lg rounded-md font-medium flex items-center justify-center">
+                                💝 Criar Minha Caneca
+                                <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                            </button>
+                            <button class="h-14 px-8 border border-burgundy-800 text-burgundy-800 hover:bg-burgundy-50 text-lg rounded-md font-medium">
+                                Ver Galeria
+                            </button>
+                        </div>
+                        <p class="text-sm text-burgundy-600">
+                            ✨ <strong>Mais de 10.000 famílias emocionadas</strong> • Entrega em 3-5 dias • Satisfação garantida
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="images\Produtos\Caneca\Caneca 2.jpg" 
+                             alt="Caneca personalizada" 
+                             class="mx-auto w-full h-[300px] md:h-[500px] lg:h-[500px] xl:h-[500px] max-w-xl lg:max-w-2xl xl:max-w-3xl overflow-hidden rounded-xl object-cover shadow-custom">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Produtos -->
+        <section id="galeria" class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                        ✨ Nossos Trabalhos
+                    </span>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                        Cada Caneca é uma Obra de Arte
+                    </h2>
+                    <p class="max-w-4xl text-burgundy-700 text-xl">
+                        Veja como transformamos ideias simples em presentes que <strong>emocionam de verdade</strong>. Cada
+                        detalhe é pensado para tocar o coração de quem recebe.
+                    </p>
+                </div>
+
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                    <div class="space-y-4">
+                        <img src="images\Produtos\Caneca\Caneca 1.jpg" 
+                             width="400" height="400" 
+                             alt="Caneca Mãe de 3 com design divertido" 
+                             class="w-full h-72 md:h-80 object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Para Mães Guerreiras</h3>
+                            <p class="text-sm text-burgundy-600">Designs que celebram a maternidade com humor e amor</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="/images/caneca-frases-engracadas.jpg" 
+                             width="400" height="400" 
+                             alt="Caneca com frases engraçadas de mãe" 
+                             class="w-full h-72 md:h-80 object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Frases que Arrancam Risadas</h3>
+                            <p class="text-sm text-burgundy-600">Porque toda mãe merece rir das próprias frases</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="images\Produtos\Caneca\Caneca 3.jpg" 
+                             width="400" height="400" 
+                             alt="Kit presente elegante com canecas personalizadas" 
+                             class="w-full h-72 md:h-80 object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Kits Presente Luxuosos</h3>
+                            <p class="text-sm text-burgundy-600">Embalagens que fazem o presente ainda mais especial</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="images\Produtos\Caneca\Caneca Frase Choro.png" 
+                             alt="Kit presente elegante" 
+                             class="w-full h-80 mx-auto object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Mensagens que Inspiram</h3>
+                            <p class="text-sm text-burgundy-600">Para começar cada dia com esperança e força</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="images\Produtos\Caneca\Caneca Heineken Danilo.png" 
+                             alt="Caneca de Chopp Personalizada" 
+                             class="w-full h-80 mx-auto object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Suas Sextas Mais Especiais</h3>
+                            <p class="text-sm text-burgundy-600">Aquela caneca personalizada que vai fazer seu happy hour único! Seu nome, seu momento!</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="images\Produtos\Caneca\caneca com colher pet.jpeg" 
+                             alt="Caneca Personalizada com Fotos do Pet" 
+                             class="w-full h-80 mx-auto object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Amor de Pet em Cada Gole</h3>
+                            <p class="text-sm text-burgundy-600">Eternize momentos especiais com seu melhor amigo. Colher exclusiva para deixar seu café ainda mais doce!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                            💎 Por que Escolher a MugCraft
+                        </span>
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                            Não é Só uma Caneca, é uma Declaração de Amor
+                        </h2>
+                        <p class="max-w-4xl text-burgundy-700 text-xl">
+                            Entendemos que por trás de cada pedido existe uma história, um sentimento, uma vontade de demonstrar
+                            carinho. Por isso, cuidamos de cada detalhe como se fosse para nossa própria família.
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                    <div class="grid gap-6">
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="palette" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Design que Emociona</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Cada design é único e pensado especialmente para você.</strong> Nós
+                                trabalhamos com amor para transformar suas ideias em arte que toca o coração.
+                            </p>
+                        </div>
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="heart" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Qualidade que Dura Gerações</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Materiais premium e técnicas profissionais.</strong> Suas canecas vão resistir ao tempo e
+                                às lavagens, mantendo as cores vibrantes e as memórias intactas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid gap-6">
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="gift" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Embalagem que Surpreende</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>A emoção começa antes mesmo de abrir.</strong> Embalagens cuidadosamente preparadas para
+                                que o momento da entrega seja inesquecível.
+                            </p>
+                        </div>
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="users" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Atendimento Humanizado</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Você não é só mais um cliente, é parte da nossa família.</strong> Acompanhamos seu pedido
+                                do início ao fim, garantindo que tudo saia perfeito.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Testimonials Gallery -->
+        <section id="depoimentos" class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                            Depoimentos Reais
+                        </span>
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                            Clientes Apaixonadas Compartilham
+                        </h2>
+                        <p class="max-w-2xl mx-auto text-burgundy-700 text-xl">
+                            Veja as fotos e mensagens reais que recebemos todos os dias. Cada sorriso é uma história de amor
+                            realizada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Depoimentos -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                        <div class="testimonial-text p-4 bg-green-50 border-l-4 border-green-500">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">M</span>
+                                </div>
+                                <span class="text-sm font-medium text-gray-700">Maria Santos</span>
+                            </div>
+                            <p class="text-sm text-gray-700 italic">
+                                "Gente, olha que PERFEITA ficou a caneca da minha mãe! 😭❤️ Ela chorou quando viu. Muito obrigada,
+                                ficou exatamente como eu imaginei!"
+                            </p>
+                        </div>
+                        <div class="flex-grow">
+                            <img src="images\Produtos\Caneca\Depoimento 1.png" 
+                                 alt="Cliente feliz com caneca" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                        <div class="testimonial-text p-4">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="w-8 h-8 bg-burgundy-100 rounded-full flex items-center justify-center">
+                                    <span class="text-burgundy-800 text-xs font-bold">A</span>
+                                </div>
+                                <span class="text-sm font-medium text-burgundy-900">Ana Clara</span>
+                            </div>
+                            <p class="text-sm text-burgundy-700 italic">
+                                "Minha sogra AMOU as frases! Disse que finalmente alguém entende ela 😂 Qualidade incrível!"
+                            </p>
+                        </div>
+                        <div class="flex-grow">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center" 
+                                 alt="Cliente mostrando caneca" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                        <div class="testimonial-text p-4 bg-pink-50 border-l-4 border-pink-500">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">J</span>
+                                </div>
+                                <span class="text-sm font-medium text-gray-700">Juliana Madalena</span>
+                            </div>
+                            <p class="text-sm text-gray-700 italic">
+                                "Gente, que caneca MARAVILHOSA! 100% personalizada, exatamente como eu queria. Recomendo demais! 🥰"
+                            </p>
+                        </div>
+                        <div class="flex-grow">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop&crop=center" 
+                                 alt="Stories Instagram cliente" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 4 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                        <div class="testimonial-text p-4">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="w-8 h-8 bg-burgundy-100 rounded-full flex items-center justify-center">
+                                    <span class="text-burgundy-800 text-xs font-bold">C</span>
+                                </div>
+                                <span class="text-sm font-medium text-burgundy-900">Carla Mendes</span>
+                            </div>
+                            <p class="text-sm text-burgundy-700 italic">
+                                "O kit ficou LINDO! A embalagem, o cuidado com cada detalhe... Minha mãe se emocionou muito ❤️"
+                            </p>
+                        </div>
+                        <div class="flex-grow">
+                            <img src="images\Produtos\Caneca\caneca mae avo etc.jpeg" 
+                                 alt="Kit presente personalizado" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 5 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                        <div class="testimonial-text p-4 bg-blue-50 border-l-4 border-blue-500">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">R</span>
+                                </div>
+                                <span class="text-sm font-medium text-gray-700">Roberta Lima</span>
+                            </div>
+                            <p class="text-sm text-gray-700 italic">
+                                "Fiz um vídeo mostrando como ficou perfeita! Cada detalhe pensado com carinho. Nota 1000!"
+                            </p>
+                        </div>
+                        <div class="testimonial-image relative flex-grow">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop&crop=center" 
+                                 alt="Vídeo review cliente" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 6 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                        <div class="testimonial-text">
+                            <div class="p-4 bg-blue-50 border-l-4 border-blue-500">
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <span class="text-white text-xs font-bold">E</span>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-700">Empresa TechCorp</span>
+                                </div>
+                                <p class="text-sm text-gray-700 italic">
+                                    "Fizemos 100 canecas personalizadas para o Dia das Mães. Todas as funcionárias ficaram emocionadas!
+                                    Qualidade excepcional."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=200&fit=crop&crop=center" 
+                                 alt="Caneca corporativa" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 100% Personalization Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16">
+                    <p class="text-burgundy-600 font-medium mb-2">100% Personalizado</p>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                        Sua Imaginação é o Limite
+                    </h2>
+                    <p class="text-burgundy-700 max-w-3xl mx-auto text-lg">
+                        Não trabalhamos com modelos prontos. <strong>Cada caneca é única</strong>, criada especialmente para
+                        você. Desde a primeira ideia até o produto final, tudo é pensado nos mínimos detalhes.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="palette" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Design Exclusivo</h3>
+                                <p class="text-burgundy-700">
+                                    Criamos o design do zero baseado na sua história, personalidade e preferências.
+                                    <strong>Nenhuma caneca é igual à outra.</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="heart" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Mensagens Únicas</h3>
+                                <p class="text-burgundy-700">
+                                    Suas palavras, suas frases especiais, suas memórias. Transformamos sentimentos em arte visual que
+                                    toca o coração.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="sparkles" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Detalhes Especiais</h3>
+                                <p class="text-burgundy-700">
+                                    Cores favoritas, datas importantes, símbolos significativos. Cada elemento tem um propósito e
+                                    conta parte da sua história.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="users" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Consultoria Pessoal</h3>
+                                <p class="text-burgundy-700">
+                                    Nossa equipe trabalha junto com você para entender sua visão e transformá-la em realidade.
+                                    <strong>Você participa de todo o processo.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <img src="images\Produtos\Caneca\Copo Stanley.jpeg"" 
+                             alt="Necessaire premium personalizada" 
+                             class="w-full h-[300px] md:h-[500px] object-cover rounded-lg shadow-lg">
+                        <div class="absolute -bottom-4 -left-4 bg-burgundy-800 text-beige-50 px-4 py-2 rounded-lg shadow-lg">
+                            <p class="text-sm font-medium">✨ 100% Única</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16">
+                    <p class="text-burgundy-600 font-medium mb-2">Como Funciona</p>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                        Do Sonho à Realidade em 4 Passos
+                    </h2>
+                    <p class="text-burgundy-700 max-w-2xl mx-auto">
+                        Nosso processo é simples, mas cada etapa é cuidadosamente pensada para garantir que sua caneca seja
+                        perfeita.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">1</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="heart" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Conte Sua História</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Compartilhe conosco sua ideia, suas memórias especiais, fotos, frases ou qualquer inspiração que você
+                            tenha.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">2</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="palette" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Criamos o Design</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Nossa equipe de designers cria um projeto exclusivo baseado na sua história. Você aprova antes da
+                            produção.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">3</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="coffee" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Produção Artesanal</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Sua caneca é produzida com materiais premium e técnicas especiais para garantir qualidade e
+                            durabilidade.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">4</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="gift" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Entrega Especial</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Embalamos com carinho e enviamos para você. O momento da entrega será inesquecível!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button class="bg-burgundy-800 text-beige-50 hover:bg-burgundy-900 px-8 py-4 rounded-md font-medium">
+                        Começar Minha Caneca Agora
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types of Personalization -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16">
+                    <p class="text-burgundy-600 font-medium mb-2">Tipos de Personalização</p>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                        Infinitas Possibilidades
+                    </h2>
+                    <p class="text-burgundy-700 max-w-2xl mx-auto">
+                        Não importa qual seja sua ideia, nós transformamos em realidade. Veja alguns dos tipos mais populares.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="heart" class="h-8 w-8 text-pink-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Para Mães e Avós</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Datas especiais (nascimento dos filhos/netos)</li>
+                            <li>• Frases marcantes que toda mãe fala</li>
+                            <li>• Fotos da família</li>
+                            <li>• Mensagens de amor dos filhos</li>
+                            <li>• Desenhos das crianças</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="users" class="h-8 w-8 text-blue-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Casais e Relacionamentos</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Data do primeiro encontro</li>
+                            <li>• Fotos do casal</li>
+                            <li>• Frases especiais entre vocês</li>
+                            <li>• Coordenadas de lugares importantes</li>
+                            <li>• Linha do tempo do relacionamento</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="sparkles" class="h-8 w-8 text-green-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Motivacional</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Frases inspiradoras personalizadas</li>
+                            <li>• Metas e objetivos</li>
+                            <li>• Versículos bíblicos</li>
+                            <li>• Mantras pessoais</li>
+                            <li>• Conquistas e vitórias</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="gift" class="h-8 w-8 text-purple-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Datas Especiais</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Aniversários únicos</li>
+                            <li>• Formaturas e conquistas</li>
+                            <li>• Aposentadoria</li>
+                            <li>• Nascimento de bebês</li>
+                            <li>• Bodas e aniversários de casamento</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="coffee" class="h-8 w-8 text-orange-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Profissional</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Logo da empresa</li>
+                            <li>• Nome e cargo personalizado</li>
+                            <li>• Brindes corporativos</li>
+                            <li>• Eventos e convenções</li>
+                            <li>• Presentes para equipe</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="palette" class="h-8 w-8 text-red-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Arte Personalizada</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Ilustrações exclusivas</li>
+                            <li>• Retratos artísticos</li>
+                            <li>• Pets e animais de estimação</li>
+                            <li>• Paisagens especiais</li>
+                            <li>• Arte abstrata personalizada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-burgundy-700 mb-6">
+                        <strong>Não encontrou sua ideia aqui?</strong> Não se preocupe! Criamos qualquer tipo de personalização.
+                    </p>
+                    <button class="border border-burgundy-800 text-burgundy-800 hover:bg-burgundy-800 hover:text-beige-50 px-8 py-3 rounded-md font-medium">
+                        Falar Sobre Minha Ideia
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-cta">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-beige-50">
+                            Não Deixe Esse Momento Passar...
+                        </h2>
+                        <p class="max-w-2xl text-beige-100 text-xl">
+                            <strong>A vida é feita de momentos únicos.</strong> Que tal transformar o próximo em uma lembrança
+                            eterna? Sua caneca personalizada está a apenas um clique de distância.
+                            <strong>Vamos criar magia juntos?</strong>
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 sm:flex-row">
+                        <button class="h-12 px-8 bg-beige-50 hover:bg-beige-100 text-burgundy-900 shadow-lg rounded-md font-medium flex items-center justify-center">
+                            ❤️ SIM! Quero Criar Minha Caneca Agora
+                            <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </button>
+                        <button class="h-12 px-8 border border-beige-50 text-beige-50 hover:bg-beige-50 hover:text-burgundy-900 rounded-md font-medium">
+                            📱 Falar no WhatsApp
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-beige-200">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="clock" class="h-4 w-4 text-green-400"></i>
+                            <span><strong>Entrega rápida</strong> em 3-5 dias</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="heart" class="h-4 w-4 text-red-400"></i>
+                            <span><strong>Satisfação</strong> 100% garantida</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="sparkles" class="h-4 w-4 text-yellow-400"></i>
+                            <span><strong>Atendimento</strong> humanizado</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-beige-300 max-w-md">
+                        ⚡ <strong>ATENÇÃO:</strong> Devido à alta demanda, estamos com prazo de entrega de 3-5 dias. Garante já
+                        a sua antes que o prazo aumente!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato" class="w-full py-6 bg-burgundy-900">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid gap-8 lg:grid-cols-4">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="flex items-center justify-center w-8 h-8 bg-beige-50 rounded-lg">
+                            <i data-lucide="coffee" class="h-5 w-5 text-burgundy-900"></i>
+                        </div>
+                        <span class="text-xl font-bold font-playfair text-beige-50">MugCraft</span>
+                    </div>
+                    <p class="text-sm text-beige-200">
+                        <strong>Transformamos momentos em lembranças eternas.</strong> Cada caneca é feita com amor, carinho e a
+                        dedicação de quem entende que os melhores presentes tocam o coração.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="mail" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="phone" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-sm font-semibold text-beige-50">Nossos Produtos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Canecas para Mães</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Canecas Motivacionais</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Kits Família</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Brindes Corporativos</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-sm font-semibold text-beige-50">Empresa</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Nossa História</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Como Funciona</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Galeria de Trabalhos</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-sm font-semibold text-beige-50">Atendimento</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">WhatsApp: (11) 99999-9999</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Política de Troca</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Rastreamento</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-burgundy-700">
+                <div class="flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-xs text-beige-200">© 2024 MugCraft. Feito com ❤️ para famílias que se amam.</p>
+                    <div class="flex space-x-4 mt-4 sm:mt-0">
+                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Política de Privacidade</a>
+                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Termos de Uso</a>
+                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 252, 245, 0.98)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 252, 245, 0.95)';
+            }
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.hover-scale').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = 'scale(1.05)';
+            });
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

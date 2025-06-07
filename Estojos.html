@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatiart - Estojos Personalizados</title>
+    <meta name="description" content="Estojos personalizados que encantam crianças e organizam o material escolar com estilo e personalidade.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            50: "#FCF4F4",
+                            100: "#F9E9E9",
+                            200: "#F3D3D3",
+                            300: "#EDBDBD",
+                            400: "#E7A7A7",
+                            500: "#E19191",
+                            600: "#DB7B7B",
+                            700: "#D56565",
+                            800: "#601735",
+                            900: "#6C1919",
+                        },
+                        beige: {
+                            50: "#FFFCF5",
+                            100: "#FFF9EB",
+                            200: "#FFF3D6",
+                            300: "#FFEEC2",
+                            400: "#FFE8AD",
+                            500: "#FFE399",
+                            600: "#FFDD84",
+                            700: "#FFD870",
+                            800: "#EBD8D4",
+                            900: "#DCC9A6",
+                        }
+                    },
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .shadow-custom {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .bg-gradient-hero {
+            background: linear-gradient(135deg, #FFFCF5 0%, #FFF9EB 100%);
+        }
+        
+        .bg-gradient-cta {
+            background: linear-gradient(135deg, #6D1F2F 0%, #6C1919 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+        }
+
+        /* Testimonials alternating layout for mobile */
+        @media (max-width: 767px) {
+            .testimonial-card {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .testimonial-card:nth-child(even) .testimonial-text {
+                order: 1;
+            }
+            
+            .testimonial-card:nth-child(even) .testimonial-image {
+                order: 2;
+            }
+            
+            .testimonial-card:nth-child(odd) .testimonial-text {
+                order: 2;
+            }
+            
+            .testimonial-card:nth-child(odd) .testimonial-image {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-beige-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-beige-200 bg-beige-50/95 backdrop-blur">
+        <div class="container mx-auto flex h-16 items-center justify-between px-4">
+            <div class="flex items-center space-x-2">
+                <div class="flex items-center justify-center w-8 h-8 bg-burgundy-800 rounded-lg">
+                    <i data-lucide="package" class="h-5 w-5 text-beige-50"></i>
+                </div>
+                <span class="text-xl font-bold font-playfair text-burgundy-900">Tatiart</span>
+            </div>
+
+            <nav class="desktop-nav hidden md:flex items-center space-x-6">
+                <a href="#galeria" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Galeria
+                </a>
+                <a href="#depoimentos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Depoimentos
+                </a>
+                <a href="#precos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Preços
+                </a>
+                <a href="#contato" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                    Contato
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:inline-flex text-sm font-medium text-burgundy-800 hover:text-burgundy-900 px-3 py-2">
+                    Entrar
+                </button>
+                <button class="bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 px-4 py-2 rounded-md text-sm font-medium">
+                    Quero Meu Estojo
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i data-lucide="menu" class="h-4 w-4"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-beige-50 border-t border-beige-200">
+            <nav class="container mx-auto px-4 py-4 space-y-2">
+                <a href="#galeria" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Galeria</a>
+                <a href="#depoimentos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Depoimentos</a>
+                <a href="#precos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Preços</a>
+                <a href="#contato" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-hero">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="flex flex-col justify-center space-y-6">
+                        <div class="space-y-4">
+                            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl font-playfair text-burgundy-900">
+                                Estojos que Encantam
+                                <span class="block text-burgundy-700">e Organizam com Estilo</span>
+                            </h1>
+                            <p class="max-w-2xl text-burgundy-700 text-xl leading-relaxed">
+                                Transforme a rotina escolar do seu filho com estojos 100% personalizados. Cada peça é única, 
+                                criada especialmente para refletir a personalidade das crianças e tornar o material escolar mais organizado.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-3 sm:flex-row">
+                            <button class="h-14 px-8 bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 shadow-lg text-lg rounded-md font-medium flex items-center justify-center">
+                                💝 Criar Meu Estojo
+                                <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-burgundy-600">
+                            ✨ <strong> Entrega em 3-7 dias • Material durável • Personalização exclusiva</strong> ✨
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="images\Produtos\Estojo\Estojo Tatiart.jpeg" 
+                             alt="Estojo personalizado" 
+                             class="mx-auto w-full h-[300px] md:h-[500px] lg:h-[500px] xl:h-[500px] max-w-xl lg:max-w-2xl xl:max-w-3xl overflow-hidden rounded-xl object-cover shadow-custom">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Produtos -->
+        <section id="galeria" class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                        ✨ Nossos Trabalhos ✨
+                    </span>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                        Cada Estojo Conta Uma História
+                    </h2>
+                    <p class="max-w-4xl text-burgundy-700 text-xl">
+                        Veja como transformamos personagens favoritos, hobbies e paixões em <strong>estojos que fazem sucesso na escola</strong>. 
+                        Cada detalhe é pensado para encantar as crianças e organizar o material escolar com estilo.
+                    </p>
+                </div>
+
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                    <div class="space-y-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/960x640%20Estojo%20e%20Mochila-1A82KukaLNyt2oFfNdD9oxNUWnBfsv.png" 
+                             alt="Conjunto de estojo e mochila" 
+                             class="w-full h-72 md:h-80 object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Conjuntos Coordenados</h3>
+                            <p class="text-sm text-burgundy-600">Estojos e mochilas que combinam para um visual completo e organizado</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/960x640%20Estojo%20Homem%20Aranha-8mmCvbsf0SRpbx4NIWqIwn6K2xLaSt.png" 
+                             alt="Estojo Homem Aranha personalizado" 
+                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Heróis Favoritos</h3>
+                            <p class="text-sm text-burgundy-600">Personagens que inspiram e acompanham seu filho todos os dias</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/960x640%20Abelhinas-jyQDU7L2M9eBdaSLwoQPzM2jPLdZl3.png" 
+                             alt="Estojos divertidos em formato de abelhinhas" 
+                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Designs Divertidos</h3>
+                            <p class="text-sm text-burgundy-600">Formatos criativos que trazem alegria para a rotina escolar</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/960x640%20Estojo%20%C3%93culos-6PhBDlBWjdXyMNTdAeNVcSpLRXLldI.png" 
+                             alt="Estojo para óculos com estampa colorida" 
+                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Proteção para Óculos</h3>
+                            <p class="text-sm text-burgundy-600">Estojos especiais que protegem os óculos com estilo e segurança</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/960x640%20Estojo%20Ady-eb93BogsPfG4qIpNoiDvpECga54D2j.png" 
+                             alt="Estojo com nome personalizado Ady" 
+                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Nomes Personalizados</h3>
+                            <p class="text-sm text-burgundy-600">Estojos únicos com o nome do seu filho, evitando trocas e perdas</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/960x640%20Estojo%20Gatinhos-EKIEhnqy9ebiA54P85hLVMWeWj17Bo.png" 
+                             alt="Estojo com estampa de gatinhos coloridos" 
+                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Estampas Exclusivas</h3>
+                            <p class="text-sm text-burgundy-600">Padrões únicos que combinam com a personalidade de cada criança</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                            💎 Por que Escolher a Tatiart 💎
+                        </span>
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                            Mais que um Estojo, uma Experiência Escolar
+                        </h2>
+                        <p class="max-w-4xl text-burgundy-700 text-xl">
+                            Entendemos que cada criança tem sua personalidade única. Por isso, criamos estojos que não apenas 
+                            organizam o material escolar, mas também expressam quem elas são e o que amam.
+                        </p>
+                    </div>
+                </div>
+                <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                    <div class="grid gap-6">
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="palette" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Design que Encanta</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Cada estojo é uma obra de arte personalizada.</strong> Nossos designs são criados para 
+                                fazer os olhos das crianças brilharem e tornar o material escolar algo que elas tenham orgulho de mostrar.
+                            </p>
+                        </div>
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="shield-check" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Durabilidade Escolar</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Materiais resistentes que aguentam o dia a dia.</strong> Nossos estojos são feitos para 
+                                suportar o uso intenso da rotina escolar, com zíperes reforçados e tecidos de alta qualidade.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid gap-6">
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="package" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Organização Inteligente</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Espaço otimizado para todo o material.</strong> Projetamos cada estojo pensando na 
+                                praticidade, com compartimentos que facilitam a organização de lápis, canetas, borrachas e outros itens.
+                            </p>
+                        </div>
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="heart" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Feito com Carinho</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Cada peça é tratada como se fosse para nossos próprios filhos.</strong> Cuidamos de todos os 
+                                detalhes para que seu filho receba um estojo verdadeiramente especial e único.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Testimonials Gallery -->
+        <section id="depoimentos" class="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div class="space-y-2">
+                      <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                          ⭐ Depoimentos Reais ⭐
+                      </span>
+                      <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                          Crianças Felizes, Pais Satisfeitos
+                      </h2>
+                      <p class="max-w-2xl mx-auto text-burgundy-700 text-xl">
+                          Veja o que as famílias estão dizendo sobre nossos estojos personalizados. Cada sorriso é uma 
+                          criança mais organizada e feliz com seu material escolar.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
+                  <!-- Depoimento 1 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-burgundy-50 border-l-4 border-burgundy-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-burgundy-800 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">T</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Tati Oliveira</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "Meu filho ficou super empolgado com o estojo do Among Us! 🚀 Os personagens ficaram idênticos ao jogo! 
+                              O zíper verde combinou perfeitamente com o tema. Ele não para de mostrar para os amigos! 😍"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Estojo\790x770 Estojo Among.png" 
+                              alt="Estojo personalizado Among Us" 
+                              class="w-full h-full object-cover">
+                      </div>
+                  </div>
+
+                  <!-- Depoimento 2 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-red-50 border-l-4 border-red-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">A</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Ana Paula</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "Os estojos de dinossauros do Bento ficaram perfeitos! 🦖 As cores vibrantes e os detalhes são incríveis! 
+                              Meu filho adora os zíperes com os pingentes de dinossauros. Material super resistente para o dia a dia escolar! 🌟"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Estojo\790x770 Estojo Bento.png" 
+                              alt="Estojo personalizado com dinossauros" 
+                              class="w-full h-full object-cover">
+                      </div>
+                  </div>
+
+                  <!-- Depoimento 3 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-pink-50 border-l-4 border-pink-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">A</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Agatha Mendes</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "O estojo do Mickey ficou incrível! 🐭 Meu filho é apaixonado por quadrinhos e esse design em preto e branco 
+                              com os detalhes coloridos ficou super estiloso. Ele é o mais animado da turma na hora de guardar os lápis! 📚"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Estojo\790x770 Estojo Mickey.png" 
+                              alt="Estojo Mickey Mouse quadrinhos" 
+                              class="w-full h-full object-cover">
+                      </div>
+                  </div>
+
+                  <!-- Depoimento 4 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-orange-50 border-l-4 border-orange-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">L</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Luciana Consentino</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "O kit de unicórnios é simplesmente mágico! 🦄✨ Minha filha ficou encantada com as carinhas fofas e as cores. 
+                              O conjunto com três estojos diferentes ajuda muito na organização do material escolar. Qualidade incrível! 💕"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Estojo\790x770 Estojo Kit Unicornio.png" 
+                              alt="Kit de estojos de unicórnio" 
+                              class="w-full h-full object-cover">
+                      </div>
+                  </div>
+
+                  <!-- Depoimento 5 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-blue-50 border-l-4 border-blue-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">B</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Bruna Chanes</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "O estojo da borboleta com o nome da minha filha ficou deslumbrante! 🦋 As cores azuis e douradas são lindas 
+                              e o acabamento é impecável. Ela adora que tem o nome dela personalizado, facilita muito na escola! ✨"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Estojo\790x770 Estojo Celsa Schimidtz.png" 
+                              alt="Estojo personalizado com borboleta e nome" 
+                              class="w-full h-full object-cover">
+                      </div>
+                  </div>
+
+                  <!-- Depoimento 6 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-purple-50 border-l-4 border-purple-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">C</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Carla Medeiros</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "O estojo do Bob Esponja fez o maior sucesso! 🍍 Meu filho adora todos os personagens e as cores vibrantes. 
+                              O tamanho é perfeito para todos os lápis e canetas da escola. Ele não troca por nada! 🌊🧽"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Estojo\790x770 Estojo Bob Esponja.png" 
+                              alt="Estojo Bob Esponja personalizado" 
+                              class="w-full h-full object-cover">
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+
+        <!-- 100% Personalization Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16">
+                    <p class="text-burgundy-600 font-medium mb-2">100% Personalizado</p>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                        A Imaginação do Seu Filho é o Limite
+                    </h2>
+                    <p class="text-burgundy-700 max-w-3xl mx-auto text-lg">
+                        Não trabalhamos com modelos prontos. <strong>Cada estojo é único</strong>, criado especialmente para 
+                        refletir os gostos e paixões do seu filho. Do personagem favorito ao hobby que ele mais ama.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="palette" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Design Exclusivo</h3>
+                                <p class="text-burgundy-700">
+                                    Criamos o design do zero baseado nos personagens, cores e temas que seu filho ama.
+                                    <strong>Nenhum estojo é igual ao outro.</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="heart" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Significado Pessoal</h3>
+                                <p class="text-burgundy-700">
+                                    Heróis, princesas, animais, esportes ou hobbies. Transformamos o que seu filho ama 
+                                    em um estojo que o acompanha todos os dias na escola.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="sparkles" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Detalhes Únicos</h3>
+                                <p class="text-burgundy-700">
+                                    Nome personalizado, cores favoritas, símbolos especiais. Cada elemento tem um propósito e 
+                                    torna o estojo verdadeiramente único e fácil de identificar.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="users" class="h-6 w-6 text-burgundy-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Consultoria Personalizada</h3>
+                                <p class="text-burgundy-700">
+                                    Nossa equipe trabalha junto com você para entender os gostos do seu filho e criar o estojo perfeito.
+                                    <strong>Você participa de todo o processo.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Estojo%20Turma%20Animais-fJSFrZgZnuEKSybZ5IWJuLlG68ueSk.jpeg" 
+                             alt="Estojos em formato de animais" 
+                             class="w-full h-[300px] md:h-[500px] object-cover rounded-lg shadow-lg">
+                        <div class="absolute -bottom-4 -left-4 bg-burgundy-800 text-beige-50 px-4 py-2 rounded-lg shadow-lg">
+                            <p class="text-sm font-medium">✨ 100% Único</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16">
+                    <p class="text-burgundy-600 font-medium mb-2">Como Funciona</p>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                        Do Sonho à Realidade em 4 Passos
+                    </h2>
+                    <p class="text-burgundy-700 max-w-2xl mx-auto">
+                        Nosso processo é simples, mas cada etapa é cuidadosamente pensada para garantir que o estojo 
+                        do seu filho seja perfeito e encante desde o primeiro momento.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">1</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="heart" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Conte-nos os Gostos</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Compartilhe conosco os personagens favoritos, cores preferidas e interesses do seu filho para 
+                            criarmos um estojo que ele vai adorar.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">2</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="palette" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Criamos o Design</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Nossa equipe de designers cria um projeto exclusivo baseado nas preferências do seu filho. 
+                            Você aprova antes da produção.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">3</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="package" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Produção Cuidadosa</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Seu estojo é produzido com materiais resistentes e técnicas especiais para garantir 
+                            durabilidade mesmo com o uso diário na escola.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="relative mb-6">
+                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-bold text-beige-50">4</span>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="gift" class="h-3 w-3 text-beige-50"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Entrega Especial</h3>
+                        <p class="text-burgundy-700 text-sm leading-relaxed">
+                            Embalamos com carinho e enviamos para você. Prepare-se para ver o sorriso no rosto do seu filho!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button class="bg-burgundy-800 text-beige-50 hover:bg-burgundy-900 px-8 py-4 rounded-md font-medium">
+                        Começar o Estojo do Meu Filho Agora
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types of Personalization -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16">
+                    <p class="text-burgundy-600 font-medium mb-2">Tipos de Personalização</p>
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                        Infinitas Possibilidades
+                    </h2>
+                    <p class="text-burgundy-700 max-w-2xl mx-auto">
+                        Não importa qual seja a paixão do seu filho, nós transformamos em um estojo incrível. 
+                        Veja alguns dos temas mais populares entre as crianças.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="heart" class="h-8 w-8 text-pink-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Animais e Bichinhos</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Estojos em formato de animais fofos</li>
+                            <li>• Estampas com pets e bichinhos</li>
+                            <li>• Designs com animais da floresta</li>
+                            <li>• Padrões com dinossauros</li>
+                            <li>• Temas marinhos com peixinhos</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="tv" class="h-8 w-8 text-blue-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Personagens Favoritos</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Super-heróis (Homem-Aranha, Batman)</li>
+                            <li>• Princesas e personagens Disney</li>
+                            <li>• Personagens de desenhos animados</li>
+                            <li>• Jogos populares como Minecraft e Roblox</li>
+                            <li>• Animes e mangás para os mais velhos</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="star" class="h-8 w-8 text-purple-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Temas Mágicos</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Unicórnios e arco-íris</li>
+                            <li>• Fadas e elementos mágicos</li>
+                            <li>• Espaço e planetas</li>
+                            <li>• Sereias e criaturas míticas</li>
+                            <li>• Dragões e castelos</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="gamepad-2" class="h-8 w-8 text-green-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Hobbies e Esportes</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Futebol e times favoritos</li>
+                            <li>• Ballet e dança</li>
+                            <li>• Instrumentos musicais</li>
+                            <li>• Skate e esportes radicais</li>
+                            <li>• Videogames e controles</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="text" class="h-8 w-8 text-orange-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Nomes e Iniciais</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Nome completo em designs criativos</li>
+                            <li>• Iniciais decoradas e estilizadas</li>
+                            <li>• Apelidos carinhosos</li>
+                            <li>• Combinações com símbolos favoritos</li>
+                            <li>• Letras em diferentes estilos e fontes</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="sparkles" class="h-8 w-8 text-red-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Estampas Exclusivas</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Padrões geométricos coloridos</li>
+                            <li>• Estampas tie-dye</li>
+                            <li>• Galáxias e elementos cósmicos</li>
+                            <li>• Flores e elementos da natureza</li>
+                            <li>• Estampas abstratas e artísticas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-burgundy-700 mb-6">
+                        <strong>Não encontrou o tema ideal?</strong> Não se preocupe! Criamos qualquer tipo de personalização que seu filho desejar.
+                    </p>
+                    <button class="border border-burgundy-800 text-burgundy-800 hover:bg-burgundy-800 hover:text-beige-50 px-8 py-3 rounded-md font-medium">
+                        Falar Sobre a Ideia do Meu Filho
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-cta">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div class="space-y-2">
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-beige-50">
+                            Transforme a Volta às Aulas em um Momento Especial
+                        </h2>
+                        <p class="max-w-2xl text-beige-100 text-xl">
+                            <strong>Um estojo personalizado faz toda a diferença.</strong> Imagine o sorriso do seu filho ao receber 
+                            um estojo único, com seu personagem favorito e seu nome. Faça da organização escolar algo divertido e especial!
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 sm:flex-row">
+                        <button class="h-12 px-8 bg-beige-50 hover:bg-beige-100 text-burgundy-900 shadow-lg rounded-md font-medium flex items-center justify-center">
+                            ✨ SIM! Quero um Estojo Personalizado
+                            <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </button>
+                        <button class="h-12 px-8 border border-beige-50 text-beige-50 hover:bg-beige-50 hover:text-burgundy-900 rounded-md font-medium">
+                            📱 Falar no WhatsApp
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-beige-200">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="clock" class="h-4 w-4 text-green-400"></i>
+                            <span><strong>Entrega rápida</strong> em 3-7 dias</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="heart" class="h-4 w-4 text-red-400"></i>
+                            <span><strong>Qualidade</strong> 100% garantida</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="sparkles" class="h-4 w-4 text-yellow-400"></i>
+                            <span><strong>Design</strong> exclusivo</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-beige-300 max-w-md">
+                        ⚡ <strong>ATENÇÃO:</strong> Garanta já o estojo personalizado do seu filho antes do início das aulas! 
+                        Faça o pedido com antecedência para receber a tempo.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato" class="w-full py-6 bg-burgundy-900">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid gap-8 lg:grid-cols-4">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="flex items-center justify-center w-8 h-8 bg-beige-50 rounded-lg">
+                            <i data-lucide="package" class="h-5 w-5 text-burgundy-900"></i>
+                        </div>
+                        <span class="text-xl font-bold font-playfair text-beige-50">Tatiart</span>
+                    </div>
+                    <p class="text-sm text-beige-200">
+                        <strong>Transformamos o material escolar em algo especial.</strong> Cada estojo é feito com amor, 
+                        carinho e a dedicação de quem entende que organização pode ser divertida e cheia de personalidade.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="mail" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-beige-200 hover:text-beige-50">
+                            <i data-lucide="phone" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-sm font-semibold text-beige-50">Nossos Produtos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Estojos Personalizados</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Kits Escolares</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Estojos para Óculos</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Brindes para Festas</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-sm font-semibold text-beige-50">Empresa</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Nossa História</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Como Funciona</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Galeria de Trabalhos</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-sm font-semibold text-beige-50">Atendimento</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">WhatsApp: (11) 99999-9999</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Política de Troca</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Rastreamento</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-burgundy-700">
+                <div class="flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-xs text-beige-200">© 2024 Tatiart. Feito com ❤️ para crianças que merecem o melhor.</p>
+                    <div class="flex space-x-4 mt-4 sm:mt-0">
+                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Política de Privacidade</a>
+                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Termos de Uso</a>
+                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 252, 245, 0.98)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 252, 245, 0.95)';
+            }
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.hover-scale').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = 'scale(1.05)';
+            });
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
