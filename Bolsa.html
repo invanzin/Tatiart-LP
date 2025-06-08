@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatiart - Mochilas Personalizadas</title>
+    <title>Index
+    </title>
     <meta name="description" content="Crie necessaires únicas e personalizadas para presentes, viagens e organização pessoal.">
     
     <!-- Tailwind CSS -->
@@ -117,758 +118,759 @@
     </style>
 </head>
 <body class="font-sans bg-beige-50">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 w-full border-b border-beige-200 bg-beige-50/95 backdrop-blur">
-        <div class="container mx-auto flex h-16 items-center justify-between px-4">
-            <div class="flex items-center space-x-2">
-                <div class="flex items-center justify-center w-8 h-8 bg-burgundy-800 rounded-lg">
-                    <i data-lucide="package" class="h-5 w-5 text-beige-50"></i>
-                </div>
-                <span class="text-xl font-bold font-playfair text-burgundy-900">MugCraft</span>
-            </div>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full border-b border-beige-200 bg-beige-50/95 backdrop-blur">
+      <div class="container mx-auto flex h-16 items-center justify-between px-4">
+          <div class="flex items-center space-x-2">
+              <div class="flex items-center justify-center w-8 h-8 bg-burgundy-800 rounded-lg">
+                  <i data-lucide="package" class="h-5 w-5 text-beige-50"></i>
+              </div>
+              <span class="text-xl font-bold font-playfair text-burgundy-900">TatiArt</span>
+          </div>
 
-            <nav class="desktop-nav hidden md:flex items-center space-x-6">
-                <a href="#galeria" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
-                    Galeria
-                </a>
-                <a href="#depoimentos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
-                    Depoimentos
-                </a>
-                <a href="#precos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
-                    Preços
-                </a>
-                <a href="#contato" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
-                    Contato
-                </a>
-            </nav>
+          <nav class="desktop-nav hidden md:flex items-center space-x-6">
+              <a href="#galeria" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                  Galeria
+              </a>
+              <a href="#depoimentos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                  Depoimentos
+              </a>
+              <a href="#precos" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                  Preços
+              </a>
+              <a href="#contato" class="text-sm font-medium text-burgundy-800 hover:text-burgundy-900 transition-colors">
+                  Contato
+              </a>
+          </nav>
 
-            <div class="flex items-center space-x-4">
-                <button class="hidden md:inline-flex text-sm font-medium text-burgundy-800 hover:text-burgundy-900 px-3 py-2">
-                    Entrar
-                </button>
-                <button class="bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 px-4 py-2 rounded-md text-sm font-medium">
-                    Quero Minha Mochila
-                </button>
-                <button id="mobile-menu-btn" class="md:hidden p-2">
-                    <i data-lucide="menu" class="h-4 w-4"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-beige-50 border-t border-beige-200">
-            <nav class="container mx-auto px-4 py-4 space-y-2">
-                <a href="#galeria" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Galeria</a>
-                <a href="#depoimentos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Depoimentos</a>
-                <a href="#precos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Preços</a>
-                <a href="#contato" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Contato</a>
-            </nav>
-        </div>
-    </header>
+          <div class="flex items-center space-x-4">
+              <button class="hidden md:inline-flex text-sm font-medium text-burgundy-800 hover:text-burgundy-900 px-3 py-2">
+                  Entrar
+              </button>
+              <button class="bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 px-4 py-2 rounded-md text-sm font-medium">
+                  Quero Minha Bolsa
+              </button>
+              <button id="mobile-menu-btn" class="md:hidden p-2">
+                  <i data-lucide="menu" class="h-4 w-4"></i>
+              </button>
+          </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden bg-beige-50 border-t border-beige-200">
+          <nav class="container mx-auto px-4 py-4 space-y-2">
+              <a href="#galeria" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Galeria</a>
+              <a href="#depoimentos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Depoimentos</a>
+              <a href="#precos" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Preços</a>
+              <a href="#contato" class="block text-sm font-medium text-burgundy-800 hover:text-burgundy-900 py-2">Contato</a>
+          </nav>
+      </div>
+  </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-hero">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-                    <div class="flex flex-col justify-center space-y-6">
-                        <div class="space-y-4">
-                            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl font-playfair text-burgundy-900">
-                                Necessaires que Organizam
-                                <span class="block text-burgundy-700">Sua Vida com Estilo</span>
-                            </h1>
-                            <p class="max-w-2xl text-burgundy-700 text-xl leading-relaxed">
-                                Transforme sua rotina com necessaires 100% personalizadas. Cada peça é única, criada especialmente 
-                                para refletir sua personalidade e organizar seus momentos mais importantes.
-                            </p>
-                        </div>
-                        <div class="flex flex-col gap-3 sm:flex-row">
-                            <button class="h-14 px-8 bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 shadow-lg text-lg rounded-md font-medium flex items-center justify-center">
-                                💝 Criar Minha Necessaire
-                                <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
-                            </button>
-                        </div>
-                        <p class="text-sm text-burgundy-600">
-                            ✨ <strong> Entrega em 3-7 dias • Qualidade premium</strong> ✨
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <img src="images\Produtos\Bolsa\Bolsa Tote 4 Estilos.jpeg" 
-                             alt="Necessaire personalizada" 
-                             class="mx-auto w-full h-full  max-w-xl lg:max-w-2xl xl:max-w-3xl overflow-hidden rounded-xl object-cover shadow-custom">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Galeria de Produtos -->
-        <section id="galeria" class="w-full py-12 md:py-24 lg:py-32 bg-white">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                    <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
-                        ✨ Nossos Trabalhos ✨
-                    </span>
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
-                        Cada Necessaire Conta Sua História
-                    </h2>
-                    <p class="max-w-4xl text-burgundy-700 text-xl">
-                        Veja como transformamos ideias simples em necessaires que <strong>organizam com amor</strong>. Cada 
-                        detalhe é pensado para facilitar sua rotina e expressar quem você é.
-                    </p>
-                </div>
-
-                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    <div class="space-y-4">
-                        <img src="images\Produtos\Bolsa\790x770 Bolsas Tote Fundo Branco.png" 
-                             alt="Necessaire personalizada para profissionais da saúde" 
-                             class="w-full h-80 md:h-[28rem] object-cover rounded-lg shadow-lg hover-scale">
-                        <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Para Profissionais Especiais</h3>
-                            <p class="text-sm text-burgundy-600">Designs que celebram sua profissão com carinho e orgulho</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4">
-                        <img src="images\Produtos\Bolsa\790x770 Bolsa Vermlha Fundo Branco.png" 
-                             alt="Necessaire com pets personalizados" 
-                             class="w-full h-80 md:h-[28rem]  object-cover rounded-lg shadow-lg hover-scale">
-                        <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Amor pelos Pets</h3>
-                            <p class="text-sm text-burgundy-600">Porque nossos bichinhos merecem estar sempre conosco</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4">
-                        <img src="images\Produtos\Bolsa\790x770 Bolsa Branca e Preta fundo Branco.png" 
-                             alt="Kit necessaires personalizadas" 
-                             class="w-full h-80 md:h-[28rem]  object-cover rounded-lg shadow-lg hover-scale">
-                        <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Kits Coordenados</h3>
-                            <p class="text-sm text-burgundy-600">Organização completa com estilo e elegância para seu dia a dia</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                    <div class="space-y-2">
-                        <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
-                            💎 Por que Escolher a Tatiart 💎
-                        </span>
-                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
-                            Mais que Organização, é Expressão Pessoal
-                        </h2>
-                        <p class="max-w-4xl text-burgundy-700 text-xl">
-                            Entendemos que cada um tem sua essência única. Por isso, criamos necessaires que não apenas 
-                            organizam, mas contam sua história e refletem sua personalidade em cada detalhe.
-                        </p>
-                    </div>
-                </div>
-                <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-                    <div class="grid gap-6">
-                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
-                            <div class="flex items-center space-x-2 mb-4">
-                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
-                                    <i data-lucide="palette" class="h-5 w-5 text-burgundy-800"></i>
-                                </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Design que Inspira</h3>
-                            </div>
-                            <p class="text-burgundy-700">
-                                <strong>Cada necessaire é uma obra de arte personalizada.</strong> Nossa equipe de designers 
-                                trabalha com paixão para transformar suas ideias em peças que inspiram sua rotina diária.
-                            </p>
-                        </div>
-                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
-                            <div class="flex items-center space-x-2 mb-4">
-                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
-                                    <i data-lucide="shield-check" class="h-5 w-5 text-burgundy-800"></i>
-                                </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Qualidade Premium</h3>
-                            </div>
-                            <p class="text-burgundy-700">
-                                <strong>Materiais de primeira linha e acabamento impecável.</strong> Suas necessaires vão 
-                                resistir ao uso diário mantendo a beleza e funcionalidade por anos.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="grid gap-6">
-                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
-                            <div class="flex items-center space-x-2 mb-4">
-                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
-                                    <i data-lucide="package" class="h-5 w-5 text-burgundy-800"></i>
-                                </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Organização Inteligente</h3>
-                            </div>
-                            <p class="text-burgundy-700">
-                                <strong>Compartimentos pensados para sua rotina.</strong> Cada necessaire é projetada para 
-                                maximizar o espaço e facilitar o acesso aos seus itens essenciais.
-                            </p>
-                        </div>
-                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
-                            <div class="flex items-center space-x-2 mb-4">
-                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
-                                    <i data-lucide="heart" class="h-5 w-5 text-burgundy-800"></i>
-                                </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Feito com Amor</h3>
-                            </div>
-                            <p class="text-burgundy-700">
-                                <strong>Cada peça é tratada como se fosse para nossa família.</strong> Cuidamos de todos os 
-                                detalhes para que você receba algo verdadeiramente especial.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Real Testimonials Gallery -->
-        <section id="depoimentos" class="w-full py-12 md:py-24 lg:py-32 bg-white">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                    <div class="space-y-2">
-                        <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
-                            ⭐ Depoimentos Reais ⭐
-                        </span>
-                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
-                            Mulheres Apaixonadas Compartilham
-                        </h2>
-                        <p class="max-w-2xl mx-auto text-burgundy-700 text-xl">
-                            Veja as fotos e mensagens reais que recebemos todos os dias. Cada sorriso é uma rotina 
-                            transformada com amor e organização.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
-                    <!-- Depoimento 1 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
-                        <div class="testimonial-text p-4 bg-burgundy-50 border-l-4 border-burgundy-500">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <div class="w-8 h-8 bg-burgundy-800 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">T</span>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700">Tati Oliveira</span>
-                            </div>
-                            <p class="text-sm text-gray-700 italic">
-                                "Gente, que necessaire LINDA! 😍 A Rita ficou emocionada com a personagem. Ficou exatamente como 
-                                a foto que a Tati me mostrou! Achei incrível! 🥰"  
-                            </p>
-                        </div>
-                        <div class="flex-grow">
-                            <img src="images\Produtos\Bolsa\790x770 Bolsas Mulheres Poderosas Experience.png" 
-                                 alt="Cliente feliz com necessaire" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                    <!-- Depoimento 2 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
-                        <div class="testimonial-text p-4 bg-red-50 border-l-4 border-red-500">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">A</span>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700">Ana Paula</span>
-                            </div>
-                            <p class="text-sm text-gray-700 italic">
-                                "Me sinto abraçado por Jesus toda vez que uso 🙏✨ Tornou meus domingos ainda mais especiais!". 
-                                O acabamento é impecável e o material é super resistente! Amei demais! ❤️"
-                            </p>
-                        </div>
-                        <div class="flex-grow">
-                            <img src="images\Produtos\Bolsa\Bolsa Vermelha com Modelo.jpeg" 
-                                 alt="Necessaire religiosa personalizada" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                    <!-- Depoimento 3 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
-                        <div class="testimonial-text p-4 bg-pink-50 border-l-4 border-pink-500">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">A</span>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700">Agatha Mendes</span>
-                            </div>
-                            <p class="text-sm text-gray-700 italic">
-                                "Meu kit de necessaires chegou! Que organização PERFEITA! Cada tamanho para uma função. 
-                                Recomendo muito! 🥰"
-                            </p>
-                        </div>
-                        <div class="flex-grow">
-                            <img src="images\Produtos\Bolsa\790x770 Bolsas Tote Depoimento.png" 
-                                 alt="Kit de necessaires Agatha" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 100% Personalization Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="text-center mb-16">
-                    <p class="text-burgundy-600 font-medium mb-2">100% Personalizado</p>
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
-                        Sua Imaginação é o Limite
-                    </h2>
-                    <p class="text-burgundy-700 max-w-3xl mx-auto text-lg">
-                        Não trabalhamos com modelos prontos. <strong>Cada necessaire é única</strong>, criada especialmente para 
-                        você. Desde a primeira ideia até o produto final, tudo é pensado para refletir sua essência.
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="palette" class="h-6 w-6 text-burgundy-800"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Design Exclusivo</h3>
-                                <p class="text-burgundy-700">
-                                    Criamos o design do zero baseado na sua personalidade, profissão e paixões.
-                                    <strong>Nenhuma necessaire é igual à outra.</strong>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="heart" class="h-6 w-6 text-burgundy-800"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Significado Pessoal</h3>
-                                <p class="text-burgundy-700">
-                                    Seus pets, sua fé, seus personagens favoritos, sua profissão. Transformamos o que você ama 
-                                    em arte funcional que te acompanha sempre.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="sparkles" class="h-6 w-6 text-burgundy-800"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Detalhes Únicos</h3>
-                                <p class="text-burgundy-700">
-                                    Cores favoritas, nomes especiais, símbolos significativos. Cada elemento tem um propósito e 
-                                    conta parte da sua história pessoal.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="users" class="h-6 w-6 text-burgundy-800"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Consultoria Pessoal</h3>
-                                <p class="text-burgundy-700">
-                                    Nossa equipe trabalha junto com você para entender sua rotina e criar a necessaire perfeita.
-                                    <strong>Você participa de todo o processo.</strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <img src="images\Produtos\Bolsa\Tati Preparação Bolsa.png" 
-                             alt="Necessaire premium personalizada" 
-                             class="w-full h-[300px] md:h-full object-cover rounded-lg shadow-lg">
-                        <div class="absolute -bottom-4 -left-4 bg-burgundy-800 text-beige-50 px-4 py-2 rounded-lg shadow-lg">
-                            <p class="text-sm font-medium">✨ 100% Única</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="text-center mb-16">
-                    <p class="text-burgundy-600 font-medium mb-2">Como Funciona</p>
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
-                        Do Sonho à Realidade em 4 Passos
-                    </h2>
-                    <p class="text-burgundy-700 max-w-2xl mx-auto">
-                        Nosso processo é simples, mas cada etapa é cuidadosamente pensada para garantir que sua necessaire 
-                        seja perfeita para sua rotina.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
-                                <span class="text-2xl font-bold text-beige-50">1</span>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
-                                <i data-lucide="heart" class="h-3 w-3 text-beige-50"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Conte Sua História</h3>
-                        <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Compartilhe conosco suas paixões, sua rotina, fotos dos seus pets, profissão ou qualquer inspiração 
-                            que você tenha.
-                        </p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
-                                <span class="text-2xl font-bold text-beige-50">2</span>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
-                                <i data-lucide="palette" class="h-3 w-3 text-beige-50"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Criamos o Design</h3>
-                        <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Nossa equipe de designers cria um projeto exclusivo baseado na sua personalidade. Você aprova antes 
-                            da produção.
-                        </p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
-                                <span class="text-2xl font-bold text-beige-50">3</span>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
-                                <i data-lucide="package" class="h-3 w-3 text-beige-50"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Produção Premium</h3>
-                        <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Sua necessaire é produzida com materiais de alta qualidade e técnicas especiais para garantir 
-                            durabilidade e beleza.
-                        </p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
-                                <span class="text-2xl font-bold text-beige-50">4</span>
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
-                                <i data-lucide="gift" class="h-3 w-3 text-beige-50"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Entrega Especial</h3>
-                        <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Embalamos com carinho e enviamos para você. Sua nova companheira de organização chegará em casa!
-                        </p>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <button class="bg-burgundy-800 text-beige-50 hover:bg-burgundy-900 px-8 py-4 rounded-md font-medium">
-                        Começar Minha Necessaire Agora
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Types of Personalization -->
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="text-center mb-16">
-                    <p class="text-burgundy-600 font-medium mb-2">Tipos de Personalização</p>
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
-                        Infinitas Possibilidades
-                    </h2>
-                    <p class="text-burgundy-700 max-w-2xl mx-auto">
-                        Não importa qual seja sua paixão ou necessidade, nós transformamos em realidade. Veja alguns dos 
-                        tipos mais populares.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
-                        <div class="text-center mb-4">
-                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="heart" class="h-8 w-8 text-pink-600"></i>
-                            </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Pets e Animais</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Fotos dos seus pets favoritos</li>
-                            <li>• Ilustrações personalizadas dos bichinhos</li>
-                            <li>• Nomes e datas especiais</li>
-                            <li>• Patinhas e símbolos fofos</li>
-                            <li>• Raças específicas e características únicas</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
-                        <div class="text-center mb-4">
-                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="briefcase" class="h-8 w-8 text-blue-600"></i>
-                            </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Profissões Especiais</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Médicas, enfermeiras e profissionais da saúde</li>
-                            <li>• Professoras e educadoras</li>
-                            <li>• Advogadas e executivas</li>
-                            <li>• Símbolos e ferramentas da profissão</li>
-                            <li>• Frases motivacionais da área</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
-                        <div class="text-center mb-4">
-                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="star" class="h-8 w-8 text-purple-600"></i>
-                            </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Fé e Espiritualidade</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Nossa Senhora e santos de devoção</li>
-                            <li>• Versículos bíblicos especiais</li>
-                            <li>• Símbolos religiosos personalizados</li>
-                            <li>• Orações e mensagens de fé</li>
-                            <li>• Anjos e elementos celestiais</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
-                        <div class="text-center mb-4">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="gamepad-2" class="h-8 w-8 text-green-600"></i>
-                            </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Anime e Personagens</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Personagens de anime favoritos</li>
-                            <li>• Desenhos animados clássicos</li>
-                            <li>• Filmes e séries que você ama</li>
-                            <li>• Logos e símbolos icônicos</li>
-                            <li>• Frases marcantes dos personagens</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
-                        <div class="text-center mb-4">
-                            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="palette" class="h-8 w-8 text-orange-600"></i>
-                            </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Nomes e Monogramas</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Seu nome em tipografias exclusivas</li>
-                            <li>• Monogramas elegantes e sofisticados</li>
-                            <li>• Iniciais decorativas</li>
-                            <li>• Combinações de nomes especiais</li>
-                            <li>• Assinaturas personalizadas</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
-                        <div class="text-center mb-4">
-                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="sparkles" class="h-8 w-8 text-red-600"></i>
-                            </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Estampas Exclusivas</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Florais delicados e modernos</li>
-                            <li>• Padrões geométricos únicos</li>
-                            <li>• Aquarelas e arte abstrata</li>
-                            <li>• Combinações de cores favoritas</li>
-                            <li>• Texturas e efeitos especiais</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <p class="text-burgundy-700 mb-6">
-                        <strong>Não encontrou sua ideia aqui?</strong> Não se preocupe! Criamos qualquer tipo de personalização.
-                    </p>
-                    <button class="border border-burgundy-800 text-burgundy-800 hover:bg-burgundy-800 hover:text-beige-50 px-8 py-3 rounded-md font-medium">
-                        Falar Sobre Minha Ideia
-                    </button>
-                </div>
-            </div>
-        </section>
+  <main>
+      <!-- Hero Section -->
+      <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-hero">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                  <div class="flex flex-col justify-center space-y-6">
+                      <div class="space-y-4">
+                          <h1 class="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl font-playfair text-burgundy-900">
+                              Bolsas Tote que Falam
+                              <span class="block text-burgundy-700">Sobre Você</span>
+                          </h1>
+                          <p class="max-w-2xl text-burgundy-700 text-xl leading-relaxed">
+                              Carregue sua história todos os dias. Cada bolsa tote é uma obra de arte única, criada 
+                              especialmente para expressar sua personalidade e acompanhar seus momentos mais especiais.
+                          </p>
+                      </div>
+                      <div class="flex flex-col gap-3 sm:flex-row">
+                          <button class="h-14 px-8 bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 shadow-lg text-lg rounded-md font-medium flex items-center justify-center">
+                              ✨ Criar Minha Bolsa Única
+                              <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                          </button>
+                      </div>
+                      <p class="text-sm text-burgundy-600">
+                          ✨ <strong>Entrega em 5-7 dias • Design exclusivo • Qualidade premium</strong> ✨
+                      </p>
+                  </div>
+                  <div class="flex items-center justify-center">
+                      <img src="images\Produtos\Bolsa\Bolsa Tote 4 Estilos.jpeg" 
+                           alt="Bolsa tote personalizada" 
+                           class="mx-auto w-full h-full  max-w-xl lg:max-w-2xl xl:max-w-3xl overflow-hidden rounded-xl object-cover shadow-custom">
+                  </div>
+              </div>
+          </div>
+      </section>
 
 
-        <!-- Final CTA Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-cta">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                    <div class="space-y-2">
-                        <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-beige-50">
-                            Sua Rotina Merece Essa Transformação...
-                        </h2>
-                        <p class="max-w-2xl text-beige-100 text-xl">
-                            <strong>A organização muda tudo na sua vida.</strong> Que tal transformar sua rotina em algo 
-                            mais prático e estiloso? Sua necessaire personalizada está a apenas um clique de distância.
-                            <strong>Vamos organizar juntas?</strong>
-                        </p>
-                    </div>
-                    <div class="flex flex-col gap-2 sm:flex-row">
-                        <button class="h-12 px-8 bg-beige-50 hover:bg-beige-100 text-burgundy-900 shadow-lg rounded-md font-medium flex items-center justify-center">
-                            ✨ SIM! Quero Minha Necessaire Agora
-                            <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-                        </button>
-                        <button class="h-12 px-8 border border-beige-50 text-beige-50 hover:bg-beige-50 hover:text-burgundy-900 rounded-md font-medium">
-                            📱 Falar no WhatsApp
-                        </button>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-beige-200">
-                        <div class="flex items-center space-x-1">
-                            <i data-lucide="clock" class="h-4 w-4 text-green-400"></i>
-                            <span><strong>Entrega rápida</strong> em 3-5 dias</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <i data-lucide="heart" class="h-4 w-4 text-red-400"></i>
-                            <span><strong>Qualidade</strong> 100% garantida</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <i data-lucide="sparkles" class="h-4 w-4 text-yellow-400"></i>
-                            <span><strong>Design</strong> exclusivo</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-beige-300 max-w-md">
-                        ⚡ <strong>ATENÇÃO:</strong> Devido à alta demanda, estamos com prazo de entrega de 3-5 dias. Garante já
-                        a sua antes que o prazo aumente!
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
+      <!-- Galeria de Produtos -->
+      <section id="galeria" class="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                  <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                      ✨ Criações Exclusivas ✨
+                  </span>
+                  <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                      Cada Bolsa Conta Uma História Única
+                  </h2>
+                  <p class="max-w-4xl text-burgundy-700 text-xl">
+                      Veja como transformamos sonhos em bolsas tote de <strong>luxo personalizado</strong>. Cada 
+                      detalhe é pensado para refletir sua essência e elevar seu estilo diário.
+                  </p>
+              </div>
 
-    <!-- Footer -->
-    <footer id="contato" class="w-full py-6 bg-burgundy-900">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="grid gap-8 lg:grid-cols-4">
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-2">
-                        <div class="flex items-center justify-center w-8 h-8 bg-beige-50 rounded-lg">
-                            <i data-lucide="package" class="h-5 w-5 text-burgundy-900"></i>
-                        </div>
-                        <span class="text-xl font-bold font-playfair text-beige-50">MugCraft</span>
-                    </div>
-                    <p class="text-sm text-beige-200">
-                        <strong>Transformamos rotinas em experiências organizadas.</strong> Cada necessaire é feita com amor, 
-                        carinho e a dedicação de quem entende que organização é sinônimo de bem-estar.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-beige-200 hover:text-beige-50">
-                            <i data-lucide="facebook" class="h-5 w-5"></i>
-                        </a>
-                        <a href="#" class="text-beige-200 hover:text-beige-50">
-                            <i data-lucide="instagram" class="h-5 w-5"></i>
-                        </a>
-                        <a href="#" class="text-beige-200 hover:text-beige-50">
-                            <i data-lucide="mail" class="h-5 w-5"></i>
-                        </a>
-                        <a href="#" class="text-beige-200 hover:text-beige-50">
-                            <i data-lucide="phone" class="h-5 w-5"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-sm font-semibold text-beige-50">Nossos Produtos</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Necessaires Personalizadas</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Kits Organização</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Necessaires Profissionais</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Brindes Corporativos</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-sm font-semibold text-beige-50">Empresa</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Nossa História</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Como Funciona</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Galeria de Trabalhos</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Depoimentos</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-sm font-semibold text-beige-50">Atendimento</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">WhatsApp: (11) 99999-9999</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Política de Troca</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Rastreamento</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Dúvidas Frequentes</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-burgundy-700">
-                <div class="flex flex-col sm:flex-row justify-between items-center">
-                    <p class="text-xs text-beige-200">© 2024 MugCraft. Feito com ❤️ para mulheres que se organizam com estilo.</p>
-                    <div class="flex space-x-4 mt-4 sm:mt-0">
-                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Política de Privacidade</a>
-                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Termos de Uso</a>
-                        <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Cookies</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+              <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                  <div class="space-y-4">
+                      <img src="images\Produtos\Bolsa\790x770 Bolsas Tote Fundo Branco.png" 
+                           alt="Bolsas tote elegantes personalizadas" 
+                           class="w-full h-80 md:h-[28rem] object-cover rounded-lg shadow-lg hover-scale">
+                      <div class="text-center">
+                          <h3 class="font-semibold text-burgundy-900">Elegância no Dia a Dia</h3>
+                          <p class="text-sm text-burgundy-600">Bolsas que combinam sofisticação e praticidade para a mulher moderna</p>
+                      </div>
+                  </div>
 
-    <script src="script.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+                  <div class="space-y-4">
+                      <img src="images\Produtos\Bolsa\790x770 Bolsa Vermlha Fundo Branco.png" 
+                           alt="Bolsa tote vermelha personalizada" 
+                           class="w-full h-80 md:h-[28rem]  object-cover rounded-lg shadow-lg hover-scale">
+                      <div class="text-center">
+                          <h3 class="font-semibold text-burgundy-900">Personalidade Vibrante</h3>
+                          <p class="text-sm text-burgundy-600">Cores que expressam sua energia e desenhos que contam sua história</p>
+                      </div>
+                  </div>
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+                  <div class="space-y-4">
+                      <img src="images\Produtos\Bolsa\790x770 Bolsa Branca e Preta fundo Branco.png" 
+                           alt="Bolsa tote bicolor clássica" 
+                           class="w-full h-80 md:h-[28rem]  object-cover rounded-lg shadow-lg hover-scale">
+                      <div class="text-center">
+                          <h3 class="font-semibold text-burgundy-900">Clássico Atemporal</h3>
+                          <p class="text-sm text-burgundy-600">Design minimalista que nunca sai de moda, perfeita para qualquer ocasião</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
+      <!-- Features Section -->
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div class="space-y-2">
+                      <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                          💎 Por que Escolher a TatiArt 💎
+                      </span>
+                      <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                          Mais que uma Bolsa, é Sua Identidade
+                      </h2>
+                      <p class="max-w-4xl text-burgundy-700 text-xl">
+                          Entendemos que cada mulher é única. Por isso, criamos bolsas tote que não apenas carregam 
+                          seus pertences, mas expressam quem você é e elevam sua confiança a cada passo.
+                      </p>
+                  </div>
+              </div>
+              <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                  <div class="grid gap-6">
+                      <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                          <div class="flex items-center space-x-2 mb-4">
+                              <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                  <i data-lucide="sparkles" class="h-5 w-5 text-burgundy-800"></i>
+                              </div>
+                              <h3 class="text-lg font-semibold text-burgundy-900">Design Exclusivo de Luxo</h3>
+                          </div>
+                          <p class="text-burgundy-700">
+                              <strong>Cada bolsa é uma peça única de arte.</strong> Nossa equipe de designers cria 
+                              exclusivamente para você, garantindo que ninguém mais tenha uma igual.
+                          </p>
+                      </div>
+                      <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                          <div class="flex items-center space-x-2 mb-4">
+                              <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                  <i data-lucide="package" class="h-5 w-5 text-burgundy-800"></i>
+                              </div>
+                              <h3 class="text-lg font-semibold text-burgundy-900">Materiais Premium</h3>
+                          </div>
+                          <p class="text-burgundy-700">
+                              <strong>Couro sintético de alta qualidade e acabamento impecável.</strong> Suas bolsas 
+                              mantêm a beleza e resistência por anos, acompanhando sua jornada diária.
+                          </p>
+                      </div>
+                  </div>
+                  <div class="grid gap-6">
+                      <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                          <div class="flex items-center space-x-2 mb-4">
+                              <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                  <i data-lucide="heart" class="h-5 w-5 text-burgundy-800"></i>
+                              </div>
+                              <h3 class="text-lg font-semibold text-burgundy-900">Funcionalidade Inteligente</h3>
+                          </div>
+                          <p class="text-burgundy-700">
+                              <strong>Espaço generoso e organizado para sua rotina.</strong> Tamanho perfeito para 
+                              laptop, documentos, cosméticos e tudo que uma mulher moderna precisa carregar.
+                          </p>
+                      </div>
+                      <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                          <div class="flex items-center space-x-2 mb-4">
+                              <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                  <i data-lucide="sparkles" class="h-5 w-5 text-burgundy-800"></i>
+                              </div>
+                              <h3 class="text-lg font-semibold text-burgundy-900">Criado com Paixão</h3>
+                          </div>
+                          <p class="text-burgundy-700">
+                              <strong>Cada bolsa é tratada como se fosse para nossa família.</strong> Cuidamos de todos os 
+                              detalhes para que você se sinta especial e confiante todos os dias.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    mobileMenu.classList.remove('active');
-                }
-            });
-        });
+      <!-- Real Testimonials Gallery -->
+      <section id="depoimentos" class="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div class="space-y-2">
+                      <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
+                          ⭐ Clientes Apaixonadas ⭐
+                      </span>
+                      <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
+                          Mulheres Reais, Histórias Verdadeiras
+                      </h2>
+                      <p class="max-w-2xl mx-auto text-burgundy-700 text-xl">
+                          Veja os depoimentos e fotos reais das nossas clientes. Cada sorriso é uma vida transformada 
+                          pelo poder de carregar algo verdadeiramente seu.
+                      </p>
+                  </div>
+              </div>
 
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = 'rgba(255, 252, 245, 0.98)';
-            } else {
-                header.style.backgroundColor = 'rgba(255, 252, 245, 0.95)';
-            }
-        });
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
+                  <!-- Depoimento 1 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-burgundy-50 border-l-4 border-burgundy-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-burgundy-800 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">C</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Carla Fernandes</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "Gente, que bolsa PERFEITA! 😍 As 'Mulheres Poderosas' ficaram lindas demais! Recebo elogios 
+                              todos os dias. É exatamente o que eu sonhava - forte, elegante e única! 💪✨"  
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Bolsa\790x770 Bolsas Mulheres Poderosas Experience.png" 
+                               alt="Cliente feliz com bolsa personalizada" 
+                               class="w-full h-full object-cover">
+                      </div>
+                  </div>
 
-        // Add hover effects to cards
-        document.querySelectorAll('.hover-scale').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                element.style.transform = 'scale(1.05)';
-            });
-            element.addEventListener('mouseleave', () => {
-                element.style.transform = 'scale(1)';
-            });
-        });
-    </script>
+                  <!-- Depoimento 2 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-red-50 border-l-4 border-red-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">M</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Marina Silva</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "Minha bolsa vermelha é TUDO! ❤️ A qualidade é incrível, o tamanho perfeito para o trabalho 
+                              e o design é simplesmente maravilhoso. Já encomendei outra para minha irmã! 🥰"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Bolsa\Bolsa Vermelha com Modelo.jpeg" 
+                               alt="Bolsa vermelha personalizada sendo usada" 
+                               class="w-full h-full object-cover">
+                      </div>
+                  </div>
+
+                  <!-- Depoimento 3 -->
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
+                      <div class="testimonial-text p-4 bg-blue-50 border-l-4 border-blue-500">
+                          <div class="flex items-center space-x-2 mb-2">
+                              <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                  <span class="text-white text-xs font-bold">L</span>
+                              </div>
+                              <span class="text-sm font-medium text-gray-700">Larissa Costa</span>
+                          </div>
+                          <p class="text-sm text-gray-700 italic">
+                              "Estou APAIXONADA pela minha bolsa tote! O cuidado na embalagem, a qualidade dos materiais... 
+                              Sinto que carrego um pedaço de arte comigo. Recomendo de olhos fechados! 💝"
+                          </p>
+                      </div>
+                      <div class="flex-grow">
+                          <img src="images\Produtos\Bolsa\790x770 Bolsas Tote Depoimento.png" 
+                               alt="Bolsas tote elegantes com depoimento" 
+                               class="w-full h-full object-cover">
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+
+      <!-- 100% Personalization Section -->
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="text-center mb-16">
+                  <p class="text-burgundy-600 font-medium mb-2">100% Personalizado</p>
+                  <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                      Sua Criatividade é o Limite
+                  </h2>
+                  <p class="text-burgundy-700 max-w-3xl mx-auto text-lg">
+                      Não trabalhamos com modelos prontos. <strong>Cada bolsa tote é exclusiva</strong>, criada especialmente 
+                      para você. Desde a primeira ideia até o produto final, tudo é pensado para expressar sua personalidade única.
+                  </p>
+              </div>
+
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                  <div class="space-y-8">
+                      <div class="flex items-start space-x-4">
+                          <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <i data-lucide="sparkles" class="h-6 w-6 text-burgundy-800"></i>
+                          </div>
+                          <div>
+                              <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Criação Exclusiva</h3>
+                              <p class="text-burgundy-700">
+                                  Criamos o design do zero baseado na sua essência, estilo e paixões.
+                                  <strong>Sua bolsa será única no mundo.</strong>
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="flex items-start space-x-4">
+                          <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <i data-lucide="heart" class="h-6 w-6 text-burgundy-800"></i>
+                          </div>
+                          <div>
+                              <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Significado Profundo</h3>
+                              <p class="text-burgundy-700">
+                                  Seus pets, sonhos, memórias, profissão, filosofia de vida. Transformamos o que você ama 
+                                  em uma bolsa que conta sua história todos os dias.
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="flex items-start space-x-4">
+                          <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <i data-lucide="sparkles" class="h-6 w-6 text-burgundy-800"></i>
+                          </div>
+                          <div>
+                              <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Luxo Acessível</h3>
+                              <p class="text-burgundy-700">
+                                  Qualidade premium, design exclusivo e atendimento personalizado. Você tem acesso ao luxo 
+                                  de uma peça única sem o preço inacessível.
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="flex items-start space-x-4">
+                          <div class="w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <i data-lucide="heart" class="h-6 w-6 text-burgundy-800"></i>
+                          </div>
+                          <div>
+                              <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Acompanhamento Total</h3>
+                              <p class="text-burgundy-700">
+                                  Você participa de cada etapa da criação. Aprovamos juntas cada detalhe antes da produção.
+                                  <strong>Sua satisfação é nossa prioridade.</strong>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="relative">
+                      <img src="images\Produtos\Bolsa\Tati Preparação Bolsa.png" 
+                           alt="Processo de criação de bolsa personalizada" 
+                           class="w-full h-[300px] md:h-full object-cover rounded-lg shadow-lg">
+                      <div class="absolute -bottom-4 -left-4 bg-burgundy-800 text-beige-50 px-4 py-2 rounded-lg shadow-lg">
+                          <p class="text-sm font-medium">✨ Feita só para Você</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="text-center mb-16">
+                  <p class="text-burgundy-600 font-medium mb-2">Como Funciona</p>
+                  <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                      Da Ideia à Sua Bolsa dos Sonhos
+                  </h2>
+                  <p class="text-burgundy-700 max-w-2xl mx-auto">
+                      Nosso processo é simples e envolvente. Cada etapa é cuidadosamente pensada para garantir que sua 
+                      bolsa tote seja exatamente como você sonhou.
+                  </p>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div class="text-center">
+                      <div class="relative mb-6">
+                          <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                              <span class="text-2xl font-bold text-beige-50">1</span>
+                          </div>
+                          <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                              <i data-lucide="heart" class="h-3 w-3 text-beige-50"></i>
+                          </div>
+                      </div>
+                      <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Compartilhe Sua Essência</h3>
+                      <p class="text-burgundy-700 text-sm leading-relaxed">
+                          Me conte sobre você! Suas cores favoritas, estilo, profissão, inspirações. Quanto mais você 
+                          compartilhar, mais única será sua bolsa.
+                      </p>
+                  </div>
+
+                  <div class="text-center">
+                      <div class="relative mb-6">
+                          <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                              <span class="text-2xl font-bold text-beige-50">2</span>
+                          </div>
+                          <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                              <i data-lucide="sparkles" class="h-3 w-3 text-beige-50"></i>
+                          </div>
+                      </div>
+                      <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Criação Artística</h3>
+                      <p class="text-burgundy-700 text-sm leading-relaxed">
+                          Transformo suas ideias em um design exclusivo. Você recebe o projeto para aprovação antes de 
+                          começarmos a produção da sua bolsa.
+                      </p>
+                  </div>
+
+                  <div class="text-center">
+                      <div class="relative mb-6">
+                          <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                              <span class="text-2xl font-bold text-beige-50">3</span>
+                          </div>
+                          <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                              <i data-lucide="package" class="h-3 w-3 text-beige-50"></i>
+                          </div>
+                      </div>
+                      <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Confecção Premium</h3>
+                      <p class="text-burgundy-700 text-sm leading-relaxed">
+                          Com técnicas artesanais e materiais selecionados, sua bolsa é criada com todo cuidado e atenção 
+                          aos detalhes que ela merece.
+                      </p>
+                  </div>
+
+                  <div class="text-center">
+                      <div class="relative mb-6">
+                          <div class="w-20 h-20 bg-burgundy-800 rounded-full flex items-center justify-center mx-auto">
+                              <span class="text-2xl font-bold text-beige-50">4</span>
+                          </div>
+                          <div class="absolute -top-2 -right-2 w-6 h-6 bg-burgundy-600 rounded-full flex items-center justify-center">
+                              <i data-lucide="sparkles" class="h-3 w-3 text-beige-50"></i>
+                          </div>
+                      </div>
+                      <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Sua Nova Companheira</h3>
+                      <p class="text-burgundy-700 text-sm leading-relaxed">
+                          Embalamos com carinho especial e enviamos sua bolsa única. Prepare-se para se apaixonar e 
+                          receber muitos elogios!
+                      </p>
+                  </div>
+              </div>
+
+              <div class="text-center mt-12">
+                  <button class="bg-burgundy-800 text-beige-50 hover:bg-burgundy-900 px-8 py-4 rounded-md font-medium">
+                      Começar Minha Bolsa Agora
+                  </button>
+              </div>
+          </div>
+      </section>
+
+      <!-- Types of Personalization -->
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="text-center mb-16">
+                  <p class="text-burgundy-600 font-medium mb-2">Estilos de Personalização</p>
+                  <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
+                      Infinitas Possibilidades de Expressão
+                  </h2>
+                  <p class="text-burgundy-700 max-w-2xl mx-auto">
+                      Não importa qual seja sua paixão ou estilo, transformamos em uma bolsa tote única. Veja alguns dos 
+                      estilos mais amados pelas nossas clientes.
+                  </p>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                      <div class="text-center mb-4">
+                          <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <i data-lucide="heart" class="h-8 w-8 text-pink-600"></i>
+                          </div>
+                          <h3 class="text-burgundy-900 font-playfair font-semibold">Minimalista Elegante</h3>
+                      </div>
+                      <ul class="space-y-2 text-sm text-burgundy-700">
+                          <li>• Design clean e sofisticado</li>
+                          <li>• Cores neutras e atemporais</li>
+                          <li>• Monogramas discretos</li>
+                          <li>• Linhas simples e modernas</li>
+                          <li>• Perfeita para qualquer ocasião</li>
+                      </ul>
+                  </div>
+
+                  <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                      <div class="text-center mb-4">
+                          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <i data-lucide="sparkles" class="h-8 w-8 text-blue-600"></i>
+                          </div>
+                          <h3 class="text-burgundy-900 font-playfair font-semibold">Profissional Chic</h3>
+                      </div>
+                      <ul class="space-y-2 text-sm text-burgundy-700">
+                          <li>• Ideal para ambiente corporativo</li>
+                          <li>• Símbolos da sua profissão</li>
+                          <li>• Cores sóbrias e elegantes</li>
+                          <li>• Espaço para laptop e documentos</li>
+                          <li>• Transmite confiança e sucesso</li>
+                      </ul>
+                  </div>
+
+                  <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                      <div class="text-center mb-4">
+                          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <i data-lucide="sparkles" class="h-8 w-8 text-purple-600"></i>
+                          </div>
+                          <h3 class="text-burgundy-900 font-playfair font-semibold">Artística Única</h3>
+                      </div>
+                      <ul class="space-y-2 text-sm text-burgundy-700">
+                          <li>• Estampas exclusivas autorais</li>
+                          <li>• Combinações de cores vibrantes</li>
+                          <li>• Elementos artísticos marcantes</li>
+                          <li>• Expressão da sua personalidade</li>
+                          <li>• Peça de conversação garantida</li>
+                      </ul>
+                  </div>
+
+                  <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                      <div class="text-center mb-4">
+                          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <i data-lucide="heart" class="h-8 w-8 text-green-600"></i>
+                          </div>
+                          <h3 class="text-burgundy-900 font-playfair font-semibold">Pet Lover</h3>
+                      </div>
+                      <ul class="space-y-2 text-sm text-burgundy-700">
+                          <li>• Ilustrações dos seus pets</li>
+                          <li>• Retratos artísticos personalizados</li>
+                          <li>• Nomes e datas especiais</li>
+                          <li>• Elementos fofos e carinhosos</li>
+                          <li>• Homenagem ao amor incondicional</li>
+                      </ul>
+                  </div>
+
+                  <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                      <div class="text-center mb-4">
+                          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <i data-lucide="sparkles" class="h-8 w-8 text-orange-600"></i>
+                          </div>
+                          <h3 class="text-burgundy-900 font-playfair font-semibold">Inspiracional</h3>
+                      </div>
+                      <ul class="space-y-2 text-sm text-burgundy-700">
+                          <li>• Frases que te motivam</li>
+                          <li>• Símbolos de fé e esperança</li>
+                          <li>• Mensagens de empoderamento</li>
+                          <li>• Elementos que fortalecem sua alma</li>
+                          <li>• Energia positiva diária</li>
+                      </ul>
+                  </div>
+
+                  <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                      <div class="text-center mb-4">
+                          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <i data-lucide="sparkles" class="h-8 w-8 text-red-600"></i>
+                          </div>
+                          <h3 class="text-burgundy-900 font-playfair font-semibold">Luxo Personalizado</h3>
+                      </div>
+                      <ul class="space-y-2 text-sm text-burgundy-700">
+                          <li>• Acabamentos premium especiais</li>
+                          <li>• Detalhes em dourado ou prateado</li>
+                          <li>• Texturas sofisticadas</li>
+                          <li>• Design exclusivo de alta costura</li>
+                          <li>• Status symbol personalizado</li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="text-center mt-12">
+                  <p class="text-burgundy-700 mb-6">
+                      <strong>Tem uma ideia diferente?</strong> Perfeito! Adoramos desafios criativos e transformamos qualquer sonho em realidade.
+                  </p>
+                  <button class="border border-burgundy-800 text-burgundy-800 hover:bg-burgundy-800 hover:text-beige-50 px-8 py-3 rounded-md font-medium">
+                      Contar Minha Ideia Única
+                  </button>
+              </div>
+          </div>
+      </section>
+
+
+      <!-- Final CTA Section -->
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-cta">
+          <div class="container mx-auto px-4 md:px-6">
+              <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div class="space-y-2">
+                      <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-beige-50">
+                          Você Merece Carregar Sua História...
+                      </h2>
+                      <p class="max-w-2xl text-beige-100 text-xl">
+                          <strong>Sua personalidade é única, sua bolsa também deveria ser.</strong> Que tal transformar seu dia a dia 
+                          com uma bolsa tote que conta sua história e expressa quem você realmente é?
+                          <strong>Vamos criar juntas sua obra de arte pessoal?</strong>
+                      </p>
+                  </div>
+                  <div class="flex flex-col gap-2 sm:flex-row">
+                      <button class="h-12 px-8 bg-beige-50 hover:bg-beige-100 text-burgundy-900 shadow-lg rounded-md font-medium flex items-center justify-center">
+                          ✨ SIM! Quero Minha Bolsa Única Agora
+                          <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                      </button>
+                      <button class="h-12 px-8 border border-beige-50 text-beige-50 hover:bg-beige-50 hover:text-burgundy-900 rounded-md font-medium">
+                          📱 Conversar no WhatsApp
+                      </button>
+                  </div>
+                  <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-beige-200">
+                      <div class="flex items-center space-x-1">
+                          <i data-lucide="clock" class="h-4 w-4 text-green-400"></i>
+                          <span><strong>Entrega expressa</strong> em 5-7 dias</span>
+                      </div>
+                      <div class="flex items-center space-x-1">
+                          <i data-lucide="heart" class="h-4 w-4 text-red-400"></i>
+                          <span><strong>Design</strong> 100% exclusivo</span>
+                      </div>
+                      <div class="flex items-center space-x-1">
+                          <i data-lucide="sparkles" class="h-4 w-4 text-yellow-400"></i>
+                          <span><strong>Qualidade</strong> premium garantida</span>
+                      </div>
+                  </div>
+                  <p class="text-xs text-beige-300 max-w-md">
+                      ⚡ <strong>OPORTUNIDADE LIMITADA:</strong> Devido à alta procura por bolsas personalizadas, estamos com lista de espera. 
+                      Reserve já a sua para não perder!
+                  </p>
+              </div>
+          </div>
+      </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contato" class="w-full py-6 bg-burgundy-900">
+      <div class="container mx-auto px-4 md:px-6">
+          <div class="grid gap-8 lg:grid-cols-4">
+              <div class="space-y-4">
+                  <div class="flex items-center space-x-2">
+                      <div class="flex items-center justify-center w-8 h-8 bg-beige-50 rounded-lg">
+                          <i data-lucide="package" class="h-5 w-5 text-burgundy-900"></i>
+                      </div>
+                      <span class="text-xl font-bold font-playfair text-beige-50">TatiArt</span>
+                  </div>
+                  <p class="text-sm text-beige-200">
+                      <strong>Transformamos sonhos em bolsas únicas.</strong> Cada peça é criada com amor, dedicação 
+                      e a paixão de quem entende que carregar estilo é carregar confiança.
+                  </p>
+                  <div class="flex space-x-4">
+                      <a href="#" class="text-beige-200 hover:text-beige-50">
+                          <i data-lucide="facebook" class="h-5 w-5"></i>
+                      </a>
+                      <a href="#" class="text-beige-200 hover:text-beige-50">
+                          <i data-lucide="instagram" class="h-5 w-5"></i>
+                      </a>
+                      <a href="#" class="text-beige-200 hover:text-beige-50">
+                          <i data-lucide="mail" class="h-5 w-5"></i>
+                      </a>
+                      <a href="#" class="text-beige-200 hover:text-beige-50">
+                          <i data-lucide="phone" class="h-5 w-5"></i>
+                      </a>
+                  </div>
+              </div>
+              <div class="space-y-4">
+                  <h4 class="text-sm font-semibold text-beige-50">Nossos Produtos</h4>
+                  <ul class="space-y-2 text-sm">
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Bolsas Tote Personalizadas</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Designs Exclusivos</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Bolsas Profissionais</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Presentes Especiais</a></li>
+                  </ul>
+              </div>
+              <div class="space-y-4">
+                  <h4 class="text-sm font-semibold text-beige-50">TatiArt</h4>
+                  <ul class="space-y-2 text-sm">
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Nossa História</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Processo Criativo</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Galeria de Criações</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Clientes Felizes</a></li>
+                  </ul>
+              </div>
+              <div class="space-y-4">
+                  <h4 class="text-sm font-semibold text-beige-50">Atendimento</h4>
+                  <ul class="space-y-2 text-sm">
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">WhatsApp: (11) 99999-9999</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Política de Qualidade</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Acompanhar Pedido</a></li>
+                      <li><a href="#" class="text-beige-200 hover:text-beige-50">Perguntas Frequentes</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="mt-8 pt-8 border-t border-burgundy-700">
+              <div class="flex flex-col sm:flex-row justify-between items-center">
+                  <p class="text-xs text-beige-200">© 2024 TatiArt. Feito com ❤️ para mulheres que expressam sua essência através do estilo.</p>
+                  <div class="flex space-x-4 mt-4 sm:mt-0">
+                      <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Política de Privacidade</a>
+                      <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Termos de Uso</a>
+                      <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Cookies</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute('href'));
+              if (target) {
+                  target.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                  });
+                  // Close mobile menu if open
+                  mobileMenu.classList.remove('active');
+              }
+          });
+      });
+
+      // Add scroll effect to header
+      window.addEventListener('scroll', () => {
+          const header = document.querySelector('header');
+          if (window.scrollY > 100) {
+              header.style.backgroundColor = 'rgba(255, 252, 245, 0.98)';
+          } else {
+              header.style.backgroundColor = 'rgba(255, 252, 245, 0.95)';
+          }
+      });
+
+      // Add hover effects to cards
+      document.querySelectorAll('.hover-scale').forEach(element => {
+          element.addEventListener('mouseenter', () => {
+              element.style.transform = 'scale(1.05)';
+          });
+          element.addEventListener('mouseleave', () => {
+              element.style.transform = 'scale(1)';
+          });
+      });
+  </script>
 </body>
 </html>
