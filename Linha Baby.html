@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MugCraft - Necessaires Personalizadas</title>
-    <meta name="description" content="Crie necessaires únicas e personalizadas para presentes, viagens e organização pessoal.">
+    <title>Tatiart Baby - Organização e Carinho para o Seu Bebê</title>
+    <meta name="description" content="Torne o dia a dia do seu bebê mais prático, organizado e especial com produtos 100% personalizáveis. Kits, bolsas, saquinhos, carteiras e muito mais para mamães que querem praticidade e carinho em cada detalhe.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,45 +16,9 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="main.js"></script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        burgundy: {
-                            50: "#FCF4F4",
-                            100: "#F9E9E9",
-                            200: "#F3D3D3",
-                            300: "#EDBDBD",
-                            400: "#E7A7A7",
-                            500: "#E19191",
-                            600: "#DB7B7B",
-                            700: "#D56565",
-                            800: "#601735",
-                            900: "#6C1919",
-                        },
-                        beige: {
-                            50: "#FFFCF5",
-                            100: "#FFF9EB",
-                            200: "#FFF3D6",
-                            300: "#FFEEC2",
-                            400: "#FFE8AD",
-                            500: "#FFE399",
-                            600: "#FFDD84",
-                            700: "#FFD870",
-                            800: "#EBD8D4",
-                            900: "#DCC9A6",
-                        }
-                    },
-                    fontFamily: {
-                        'playfair': ['"Playfair Display"', 'serif'],
-                        'sans': ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="tailwind.config.js"></script>
     
     <style>
         .shadow-custom {
@@ -122,9 +86,9 @@
         <div class="container mx-auto flex h-16 items-center justify-between px-4">
             <div class="flex items-center space-x-2">
                 <div class="flex items-center justify-center w-8 h-8 bg-burgundy-800 rounded-lg">
-                    <i data-lucide="package" class="h-5 w-5 text-beige-50"></i>
+                    <i data-lucide="coffee" class="h-5 w-5 text-beige-50"></i>
                 </div>
-                <span class="text-xl font-bold font-playfair text-burgundy-900">MugCraft</span>
+                <span class="text-xl font-bold font-playfair text-burgundy-900">Tatiart Baby</span>
             </div>
 
             <nav class="desktop-nav hidden md:flex items-center space-x-6">
@@ -147,7 +111,7 @@
                     Entrar
                 </button>
                 <button class="bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 px-4 py-2 rounded-md text-sm font-medium">
-                    Quero Minha Necessaire
+                    Quero Meu Kit Baby
                 </button>
                 <button id="mobile-menu-btn" class="md:hidden p-2">
                     <i data-lucide="menu" class="h-4 w-4"></i>
@@ -174,33 +138,34 @@
                     <div class="flex flex-col justify-center space-y-6">
                         <div class="space-y-4">
                             <h1 class="text-4xl font-bold tracking-tight sm:text-6xl xl:text-7xl font-playfair text-burgundy-900">
-                                Necessaires que Organizam
-                                <span class="block text-burgundy-700">Sua Vida com Estilo</span>
+                                Organização e Carinho em Cada Detalhe
+                                <span class="block text-burgundy-700">Para o Seu Bebê</span>
                             </h1>
                             <p class="max-w-2xl text-burgundy-700 text-xl leading-relaxed">
-                                Transforme sua rotina com necessaires 100% personalizadas. Cada peça é única, criada especialmente 
-                                para refletir sua personalidade e organizar seus momentos mais importantes.
+                                A chegada de um bebê transforma tudo. Nossa Linha Baby foi criada para tornar esse momento único ainda mais especial, trazendo praticidade, organização e muito amor para o dia a dia das mamães e dos papais. Personalize cada item com nome, cor e estampa – do jeitinho que você sonhou!
                             </p>
                         </div>
                         <div class="flex flex-col gap-3 sm:flex-row">
                             <button class="h-14 px-8 bg-burgundy-800 hover:bg-burgundy-900 text-beige-50 shadow-lg text-lg rounded-md font-medium flex items-center justify-center">
-                                💝 Criar Minha Necessaire
+                                💝 Criar Meu Kit Baby
                                 <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                            </button>
+                            <button class="h-14 px-8 border border-burgundy-800 text-burgundy-800 hover:bg-burgundy-50 text-lg rounded-md font-medium">
+                                Ver Galeria
                             </button>
                         </div>
                         <p class="text-sm text-burgundy-600">
-                            ✨ <strong> Entrega em 3-7 dias • Qualidade premium</strong> ✨
+                            ✨ <strong>Produtos 100% personalizáveis</strong> • Organização e praticidade para a rotina da mamãe • Feito com carinho
                         </p>
                     </div>
                     <div class="flex items-center justify-center">
-                        <img src="images\Produtos\Necessaires\Necessaire Gatinho.jpeg" 
-                             alt="Necessaire personalizada" 
-                             class="mx-auto w-full h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] max-w-xl lg:max-w-2xl xl:max-w-3xl overflow-hidden rounded-xl object-cover shadow-custom">
+                        <img src="images\Produtos\Linha Baby\960x640 Linha Baby Kit Aurora Inteiro.png" 
+                             alt="Caneca personalizada" 
+                             class="mx-auto w-full h-[300px] md:h-[500px] lg:h-[500px] xl:h-[500px] max-w-xl lg:max-w-2xl xl:max-w-3xl overflow-hidden rounded-xl object-cover shadow-custom">
                     </div>
                 </div>
             </div>
         </section>
-
 
         <!-- Galeria de Produtos -->
         <section id="galeria" class="w-full py-12 md:py-24 lg:py-32 bg-white">
@@ -210,75 +175,76 @@
                         ✨ Nossos Trabalhos
                     </span>
                     <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
-                        Cada Necessaire Conta Sua História
+                        Cada Produto Facilita um Momento Especial
                     </h2>
                     <p class="max-w-4xl text-burgundy-700 text-xl">
-                        Veja como transformamos ideias simples em necessaires que <strong>organizam com amor</strong>. Cada 
-                        detalhe é pensado para facilitar sua rotina e expressar quem você é.
+                        Conheça alguns itens da Linha Baby e veja como cada detalhe pode transformar a rotina com seu bebê. Tudo é feito sob medida para você e seu pequeno!
                     </p>
                 </div>
 
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     <div class="space-y-4">
-                        <img src="images\Produtos\Necessaires\Necessaire 6.jpg " 
-                             alt="Necessaire personalizada para profissionais da saúde" 
+                        <img src="images\Produtos\Linha Baby\960x640 Linha Baby Farmacinha Aurora.png" 
+                             alt="Farmacinha personalizada" 
                              class="w-full h-72 md:h-80 object-cover rounded-lg shadow-lg hover-scale">
                         <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Para Profissionais Especiais</h3>
-                            <p class="text-sm text-burgundy-600">Designs que celebram sua profissão com carinho e orgulho</p>
+                            <h3 class="font-semibold text-burgundy-900">Farmacinha Personalizada</h3>
+                            <p class="text-sm text-burgundy-600">Ideal para armazenar os
+                                medicamentos do bebe separado dos demais
+                                medicamentos da casa, garantindo que nada ficou pra trás! Personalize com nome, tema e cores!</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <img src="images\Produtos\Necessaires\Necessaire Cachorrinho.png" 
-                             alt="Necessaire com pets personalizados" 
-                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <img src="images\Produtos\Linha Baby\960x640 Linha Baby Aurora Necessaire.png" 
+                             alt="Necessaire baby personalizada" 
+                             class="w-full h-72 md:h-80 object-cover rounded-lg shadow-lg hover-scale">
                         <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Amor pelos Pets</h3>
-                            <p class="text-sm text-burgundy-600">Porque nossos bichinhos merecem estar sempre conosco</p>
+                            <h3 class="font-semibold text-burgundy-900">Necessaire Baby</h3>
+                            <p class="text-sm text-burgundy-600">Sim, essa peça versátil também é queridinha das mamães! Ideal para fraldas, pomadas e itens de higiene. Praticidade para a mamãe, conforto para o bebê.</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <img src="images\Produtos\Necessaires\Necessaire Agatha.jpeg" 
-                             alt="Kit necessaires personalizadas" 
-                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <img src="images\Produtos\Linha Baby\960x640 Linha Baby Aurora Porta Lencinho.png" 
+                             alt="Porta lencinho personalizado" 
+                             class="w-full h-72 md:h-80 object-cover rounded-lg shadow-lg hover-scale">
                         <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Kits Coordenados</h3>
-                            <p class="text-sm text-burgundy-600">Organização completa com estilo e elegância para seu dia a dia</p>
+                            <h3 class="font-semibold text-burgundy-900">Porta Lencinho e Fralda</h3>
+                            <p class="text-sm text-burgundy-600">Tenha sempre os lencinhos e fraldas à mão, com praticidade e estilo. Seja em casa ou no passeio. Um item indispensável para facilitar a higiene do bebê em qualquer momento.</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <img src="images\Produtos\Necessaires\Necessaire Religiosa.jpeg" 
-                             alt="Necessaire religiosa personalizada" 
-                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <img src="images\Produtos\Linha Baby\960x640 Linha Baby Aurora Carteira Pediátrica.png" 
+                             alt="Carteira pediátrica personalizada" 
+                             class="w-full h-80 mx-auto object-cover rounded-lg shadow-lg hover-scale">
                         <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Fé que Acompanha</h3>
-                            <p class="text-sm text-burgundy-600">Designs religiosos que fortalecem sua espiritualidade</p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <img src="images\Produtos\Necessaires\Necessaire One Piece.jpeg" 
-                             alt="Necessaire com personagens favoritos" 
-                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
-                        <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">Seus Personagens Favoritos</h3>
-                            <p class="text-sm text-burgundy-600">Anime, desenhos e tudo que você ama em uma peça única</p>
+                            <h3 class="font-semibold text-burgundy-900">Carteira Pediátrica</h3>
+                            <p class="text-sm text-burgundy-600">Guarde a carteirinha de vacinação, documentos e receitas do bebê de forma segura e organizada. Tudo pronto para as consultas e emergências.</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <img src="images\Produtos\Necessaires\Necessaire Estampa Tatiarte.jpeg" 
-                             alt="Necessaire com personagens favoritos" 
-                             class="w-full h-72 md:h-80  object-cover rounded-lg shadow-lg hover-scale">
+                        <img src="images\Produtos\Linha Baby\960x640 Linha Baby Aurora Saquinho de Roupas.png" 
+                             alt="Saquinho de roupas sujas personalizado" 
+                             class="w-full h-80 mx-auto object-cover rounded-lg shadow-lg hover-scale">
                         <div class="text-center">
-                            <h3 class="font-semibold text-burgundy-900">A estampa que você escolher</h3>
-                            <p class="text-sm text-burgundy-600">Quer uma estampa personalizada? Nós fazemos isso!</p>
+                            <h3 class="font-semibold text-burgundy-900">Saquinho de Roupas</h3>
+                            <p class="text-sm text-burgundy-600">Separe as roupinhas sujas ou limpas na bolsa do bebê. Perfeito para creche, passeios ou viagens, facilitando o dia a dia da mamãe!</p>
                         </div>
                     </div>
-                    
+
+                    <div class="space-y-4">
+                        <img src="images\Produtos\Linha Baby\960x640 Linha Baby Aurora Trocador.png" 
+                             alt="Trocador portátil personalizado" 
+                             class="w-full h-80 mx-auto object-cover rounded-lg shadow-lg hover-scale">
+                        <div class="text-center">
+                            <h3 class="font-semibold text-burgundy-900">Trocador Portátil</h3>
+                            <p class="text-sm text-burgundy-600">Praticidade para trocar o bebê em qualquer lugar, com conforto e higiene. Um verdadeiro aliado para as situações de emergência!</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -289,14 +255,13 @@
                 <div class="flex flex-col items-center justify-center space-y-4 text-center">
                     <div class="space-y-2">
                         <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-medium">
-                            💎 Por que Escolher a Tatiart
+                            �� Por que Escolher a Linha Baby
                         </span>
                         <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
-                            Mais que Organização, é Expressão Pessoal
+                            Feito para Facilitar a Vida das Mamães
                         </h2>
                         <p class="max-w-4xl text-burgundy-700 text-xl">
-                            Entendemos que cada um tem sua essência única. Por isso, criamos necessaires que não apenas 
-                            organizam, mas contam sua história e refletem sua personalidade em cada detalhe.
+                            Sabemos que a rotina de uma mãe de recém-nascido é cheia de desafios. Por isso, cada item da Linha Baby é pensado para trazer mais praticidade, organização e tranquilidade para o seu dia a dia. E o melhor: tudo 100% personalizável, para deixar esse momento ainda mais especial e único.
                         </p>
                     </div>
                 </div>
@@ -307,37 +272,11 @@
                                 <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
                                     <i data-lucide="palette" class="h-5 w-5 text-burgundy-800"></i>
                                 </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Design que Inspira</h3>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Design que Emociona</h3>
                             </div>
                             <p class="text-burgundy-700">
-                                <strong>Cada necessaire é uma obra de arte personalizada.</strong> Nossa equipe de designers 
-                                trabalha com paixão para transformar suas ideias em peças que inspiram sua rotina diária.
-                            </p>
-                        </div>
-                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
-                            <div class="flex items-center space-x-2 mb-4">
-                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
-                                    <i data-lucide="shield-check" class="h-5 w-5 text-burgundy-800"></i>
-                                </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Qualidade Premium</h3>
-                            </div>
-                            <p class="text-burgundy-700">
-                                <strong>Materiais de primeira linha e acabamento impecável.</strong> Suas necessaires vão 
-                                resistir ao uso diário mantendo a beleza e funcionalidade por anos.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="grid gap-6">
-                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
-                            <div class="flex items-center space-x-2 mb-4">
-                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
-                                    <i data-lucide="package" class="h-5 w-5 text-burgundy-800"></i>
-                                </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Organização Inteligente</h3>
-                            </div>
-                            <p class="text-burgundy-700">
-                                <strong>Compartimentos pensados para sua rotina.</strong> Cada necessaire é projetada para 
-                                maximizar o espaço e facilitar o acesso aos seus itens essenciais.
+                                <strong>Cada design é único e pensado especialmente para você.</strong> Nós
+                                trabalhamos com amor para transformar suas ideias em arte que toca o coração.
                             </p>
                         </div>
                         <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
@@ -345,11 +284,37 @@
                                 <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
                                     <i data-lucide="heart" class="h-5 w-5 text-burgundy-800"></i>
                                 </div>
-                                <h3 class="text-lg font-semibold text-burgundy-900">Feito com Amor</h3>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Qualidade que Dura Gerações</h3>
                             </div>
                             <p class="text-burgundy-700">
-                                <strong>Cada peça é tratada como se fosse para nossa família.</strong> Cuidamos de todos os 
-                                detalhes para que você receba algo verdadeiramente especial.
+                                <strong>Materiais premium e técnicas profissionais.</strong> Suas canecas vão resistir ao tempo e
+                                às lavagens, mantendo as cores vibrantes e as memórias intactas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid gap-6">
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="gift" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Embalagem que Surpreende</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>A emoção começa antes mesmo de abrir.</strong> Embalagens cuidadosamente preparadas para
+                                que o momento da entrega seja inesquecível.
+                            </p>
+                        </div>
+                        <div class="border border-beige-200 bg-white shadow-lg rounded-lg p-6">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="flex items-center justify-center w-10 h-10 bg-burgundy-100 rounded-lg">
+                                    <i data-lucide="users" class="h-5 w-5 text-burgundy-800"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-burgundy-900">Atendimento Humanizado</h3>
+                            </div>
+                            <p class="text-burgundy-700">
+                                <strong>Você não é só mais um cliente, é parte da nossa família.</strong> Acompanhamos seu pedido
+                                do início ao fim, garantindo que tudo saia perfeito.
                             </p>
                         </div>
                     </div>
@@ -366,33 +331,33 @@
                             Depoimentos Reais
                         </span>
                         <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900">
-                            Mulheres Apaixonadas Compartilham
+                            Clientes Apaixonadas Compartilham
                         </h2>
                         <p class="max-w-2xl mx-auto text-burgundy-700 text-xl">
-                            Veja as fotos e mensagens reais que recebemos todos os dias. Cada sorriso é uma rotina 
-                            transformada com amor e organização.
+                            Veja as fotos e mensagens reais que recebemos todos os dias. Cada sorriso é uma história de amor
+                            realizada.
                         </p>
                     </div>
                 </div>
 
+                <!-- Depoimentos -->
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
                     <!-- Depoimento 1 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
                         <div class="testimonial-text p-4 bg-burgundy-50 border-l-4 border-burgundy-500">
                             <div class="flex items-center space-x-2 mb-2">
                                 <div class="w-8 h-8 bg-burgundy-800 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">T</span>
+                                    <span class="text-white text-xs font-bold">M</span>
                                 </div>
-                                <span class="text-sm font-medium text-gray-700">Tati Oliveira</span>
+                                <span class="text-sm font-medium text-gray-700">Mariana, mãe do Guilherme</span>
                             </div>
                             <p class="text-sm text-gray-700 italic">
-                                "Gente, que necessaire LINDA! 😍 A Rita ficou emocionada com a personagem. Ficou exatamente como 
-                                a foto que a Tati me mostrou! Achei incrível! 🥰"  
+                                "O saquinho de roupas sujas do Guilherme virou meu aliado! Agora consigo separar tudo direitinho na bolsa e ainda ficou lindo com o tema de astronauta. Praticidade e fofura juntos!💞"
                             </p>
                         </div>
                         <div class="flex-grow">
-                            <img src="images\Produtos\Necessaires\Necessaire Rita 395x385 .png" 
-                                 alt="Cliente feliz com necessaire" 
+                            <img src="images\\Produtos\\Linha Baby\\790x770 Linha Baby Guilherme.png" 
+                                 alt="Saquinho personalizado Guilherme" 
                                  class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -402,18 +367,17 @@
                         <div class="testimonial-text p-4 bg-red-50 border-l-4 border-red-500">
                             <div class="flex items-center space-x-2 mb-2">
                                 <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">A</span>
+                                    <span class="text-white text-xs font-bold">C</span>
                                 </div>
-                                <span class="text-sm font-medium text-gray-700">Ana Paula</span>
+                                <span class="text-sm font-medium text-gray-700">Camila, mãe da Helena</span>
                             </div>
                             <p class="text-sm text-gray-700 italic">
-                                "Me sinto abraçado por Jesus toda vez que uso 🙏✨ Tornou meus domingos ainda mais especiais!". 
-                                O acabamento é impecável e o material é super resistente! Amei demais! ❤️"
+                                "Meu marido comprou o kit para nossa filha Helena e foi o melhor presente! A bolsa, o porta-documentos e a necessaire facilitam muito na hora de sair de casa.🥰 Não saio sem eles!"
                             </p>
                         </div>
                         <div class="flex-grow">
-                            <img src="images\Produtos\Necessaires\Necessaire Bolsa Jesus.jpeg" 
-                                 alt="Necessaire religiosa personalizada" 
+                            <img src="images\\Produtos\\Linha Baby\\790x770 Linha Baby Kit Helena.png" 
+                                 alt="Kit personalizado Helena" 
                                  class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -423,79 +387,17 @@
                         <div class="testimonial-text p-4 bg-pink-50 border-l-4 border-pink-500">
                             <div class="flex items-center space-x-2 mb-2">
                                 <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">A</span>
+                                    <span class="text-white text-xs font-bold">J</span>
                                 </div>
-                                <span class="text-sm font-medium text-gray-700">Agatha Mendes</span>
+                                <span class="text-sm font-medium text-gray-700">Juliana, mãe da Violeta</span>
                             </div>
                             <p class="text-sm text-gray-700 italic">
-                                "Meu kit de necessaires chegou! Que organização PERFEITA! Cada tamanho para uma função. 
-                                Recomendo muito! 🥰"
+                                "Amei poder escolher cada detalhe do kit da minha filha Violeta. O porta-vacinas é super prático e a necessaire cabe tudo o que preciso. Quando chegou ficamos emociados! É uma fase única nas nossas vidas!🩷💞"
                             </p>
                         </div>
                         <div class="flex-grow">
-                            <img src="images\Produtos\Necessaires\Necessaire Maria Maris.jpeg" 
-                                 alt="Kit de necessaires Agatha" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                    <!-- Depoimento 4 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
-                        <div class="testimonial-text p-4 bg-orange-50 border-l-4 border-orange-500">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">L</span>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700">Luciana Consentino</span>
-                            </div>
-                            <p class="text-sm text-gray-700 italic">
-                                "A necessaire que pedi ficou incrível! Dei te presente de dia das mães e ela amou! Disse que vai usar sempre, muito obrigada Tati!💕"
-                            </p>
-                        </div>
-                        <div class="flex-grow">
-                            <img src="images\Produtos\Necessaires\Necessaire Mae 395x385 .png" 
-                                 alt="Necessaire com pets" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                    <!-- Depoimento 5 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
-                        <div class="testimonial-text p-4 bg-blue-50 border-l-4 border-blue-500">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">B</span>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700">Bruna Chanes</span>
-                            </div>
-                            <p class="text-sm text-gray-700 italic">
-                                "A necessaire do Frozen ficou perfeita! Todos os personagens perfeitos. Minha filha amou que veio junto o nome dela, deixou ainda mais especial!🥰"
-                            </p>
-                        </div>
-                        <div class="flex-grow">
-                            <img src="images\Produtos\Necessaires\Necessaire Frozen.jpeg" 
-                                 alt="Necessaire One Piece" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                    <!-- Depoimento 6 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden testimonial-card flex flex-col">
-                        <div class="testimonial-text p-4 bg-purple-50 border-l-4 border-purple-500">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">C</span>
-                                </div>
-                                <span class="text-sm font-medium text-gray-700">Carla Medeiros</span>
-                            </div>
-                            <p class="text-sm text-gray-700 italic">
-                                "Necessaire premium para executivas! Organização total para viagens de trabalho. 
-                                Qualidade excepcional, recomendo para todas as profissionais!"
-                            </p>
-                        </div>
-                        <div class="flex-grow">
-                            <img src="images\Produtos\Necessaires\Necessaire Premium Aberta 395x385 .png" 
-                                 alt="Necessaire organizadora premium" 
+                            <img src="images\\Produtos\\Linha Baby\\790x770 Linha Baby Violeta.png" 
+                                 alt="Kit personalizado Violeta" 
                                  class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -507,13 +409,12 @@
         <section class="w-full py-12 md:py-24 lg:py-32 bg-beige-50">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="text-center mb-16">
-                    <p class="text-burgundy-600 font-medium mb-2">100% Personalizado</p>
+                    <p class="text-burgundy-600 font-medium mb-2">100% Personalizável</p>
                     <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-burgundy-900 mb-4">
-                        Sua Imaginação é o Limite
+                        Cada Detalhe do Seu Jeito
                     </h2>
                     <p class="text-burgundy-700 max-w-3xl mx-auto text-lg">
-                        Não trabalhamos com modelos prontos. <strong>Cada necessaire é única</strong>, criada especialmente para 
-                        você. Desde a primeira ideia até o produto final, tudo é pensado para refletir sua essência.
+                        Todos os itens da Linha Baby são feitos sob medida para você e seu bebê. Escolha o nome, as cores, o tema, a estampa e cada detalhe – tudo para deixar a rotina mais prática, organizada e cheia de carinho.
                     </p>
                 </div>
 
@@ -526,8 +427,7 @@
                             <div>
                                 <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Design Exclusivo</h3>
                                 <p class="text-burgundy-700">
-                                    Criamos o design do zero baseado na sua personalidade, profissão e paixões.
-                                    <strong>Nenhuma necessaire é igual à outra.</strong>
+                                    Você escolhe o tema, as cores e o nome. Criamos tudo do zero para combinar com o enxoval e o estilo do seu bebê.
                                 </p>
                             </div>
                         </div>
@@ -537,10 +437,9 @@
                                 <i data-lucide="heart" class="h-6 w-6 text-burgundy-800"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Significado Pessoal</h3>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Funcionalidade com Carinho</h3>
                                 <p class="text-burgundy-700">
-                                    Seus pets, sua fé, seus personagens favoritos, sua profissão. Transformamos o que você ama 
-                                    em arte funcional que te acompanha sempre.
+                                    Cada produto é pensado para facilitar a rotina da mamãe: mais organização, praticidade e beleza para o dia a dia.
                                 </p>
                             </div>
                         </div>
@@ -550,10 +449,9 @@
                                 <i data-lucide="sparkles" class="h-6 w-6 text-burgundy-800"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Detalhes Únicos</h3>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Detalhes que Encantam</h3>
                                 <p class="text-burgundy-700">
-                                    Cores favoritas, nomes especiais, símbolos significativos. Cada elemento tem um propósito e 
-                                    conta parte da sua história pessoal.
+                                    Bordados, estampas, frases, personagens e símbolos: tudo pode ser personalizado para criar um kit único e cheio de significado.
                                 </p>
                             </div>
                         </div>
@@ -563,21 +461,20 @@
                                 <i data-lucide="users" class="h-6 w-6 text-burgundy-800"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Consultoria Pessoal</h3>
+                                <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-2">Você Participa de Tudo</h3>
                                 <p class="text-burgundy-700">
-                                    Nossa equipe trabalha junto com você para entender sua rotina e criar a necessaire perfeita.
-                                    <strong>Você participa de todo o processo.</strong>
+                                    Nós acompanhamos cada etapa junto com você, para garantir que o resultado final seja exatamente como você sonhou.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="relative">
-                        <img src="images\Produtos\Necessaires\Necessaire Premium.jpeg" 
-                             alt="Necessaire premium personalizada" 
-                             class="w-full h-[500px] md:h-[600px] object-cover rounded-lg shadow-lg">
+                        <img src="images\Produtos\Linha Baby\Linha BabyKit Higiene Bucal.jpg" 
+                             alt="Kit higiene bucal baby personalizado" 
+                             class="w-full h-[300px] md:h-[600px] object-cover rounded-lg shadow-lg">
                         <div class="absolute -bottom-4 -left-4 bg-burgundy-800 text-beige-50 px-4 py-2 rounded-lg shadow-lg">
-                            <p class="text-sm font-medium">✨ 100% Única</p>
+                            <p class="text-sm font-medium">✨ 100% Único</p>
                         </div>
                     </div>
                 </div>
@@ -593,8 +490,8 @@
                         Do Sonho à Realidade em 4 Passos
                     </h2>
                     <p class="text-burgundy-700 max-w-2xl mx-auto">
-                        Nosso processo é simples, mas cada etapa é cuidadosamente pensada para garantir que sua necessaire 
-                        seja perfeita para sua rotina.
+                        Nosso processo é simples, mas cada etapa é cuidadosamente pensada para garantir que seus produtos sejam
+                        perfeitos.
                     </p>
                 </div>
 
@@ -608,10 +505,9 @@
                                 <i data-lucide="heart" class="h-3 w-3 text-beige-50"></i>
                             </div>
                         </div>
-                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Conte Sua História</h3>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Conte Sua Rotina</h3>
                         <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Compartilhe conosco suas paixões, sua rotina, fotos dos seus pets, profissão ou qualquer inspiração 
-                            que você tenha.
+                            Compartilhe com a gente o que você e seu bebê precisam: temas, cores, nomes, itens essenciais e tudo que faz parte do seu dia a dia.
                         </p>
                     </div>
 
@@ -626,8 +522,7 @@
                         </div>
                         <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Criamos o Design</h3>
                         <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Nossa equipe de designers cria um projeto exclusivo baseado na sua personalidade. Você aprova antes 
-                            da produção.
+                            Nós criamos o projeto do seu kit e você aprova cada detalhe antes de começar a produção. Tudo do seu jeito!
                         </p>
                     </div>
 
@@ -640,10 +535,9 @@
                                 <i data-lucide="package" class="h-3 w-3 text-beige-50"></i>
                             </div>
                         </div>
-                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Produção Premium</h3>
+                        <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Produção com Carinho</h3>
                         <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Sua necessaire é produzida com materiais de alta qualidade e técnicas especiais para garantir 
-                            durabilidade e beleza.
+                            Cada peça é feita com materiais de alta qualidade, cuidado e muito amor, pronta para facilitar sua rotina.
                         </p>
                     </div>
 
@@ -658,14 +552,14 @@
                         </div>
                         <h3 class="text-xl font-playfair font-semibold text-burgundy-900 mb-3">Entrega Especial</h3>
                         <p class="text-burgundy-700 text-sm leading-relaxed">
-                            Embalamos com carinho e enviamos para você. Sua nova companheira de organização chegará em casa!
+                            Embalamos tudo com carinho e enviamos para você. Pronto: seu enxoval personalizado chega até sua casa, pronto para viver momentos únicos!
                         </p>
                     </div>
                 </div>
 
                 <div class="text-center mt-12">
                     <button class="bg-burgundy-800 text-beige-50 hover:bg-burgundy-900 px-8 py-4 rounded-md font-medium">
-                        Começar Minha Necessaire Agora
+                        Quero Meu Kit Baby
                     </button>
                 </div>
             </div>
@@ -680,8 +574,7 @@
                         Infinitas Possibilidades
                     </h2>
                     <p class="text-burgundy-700 max-w-2xl mx-auto">
-                        Não importa qual seja sua paixão ou necessidade, nós transformamos em realidade. Veja alguns dos 
-                        tipos mais populares.
+                        Não importa qual seja sua ideia, nós transformamos em realidade. Veja alguns dos tipos mais populares.
                     </p>
                 </div>
 
@@ -691,94 +584,94 @@
                             <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i data-lucide="heart" class="h-8 w-8 text-pink-600"></i>
                             </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Pets e Animais</h3>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Para Mães e Avós</h3>
                         </div>
                         <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Fotos dos seus pets favoritos</li>
-                            <li>• Ilustrações personalizadas dos bichinhos</li>
-                            <li>• Nomes e datas especiais</li>
-                            <li>• Patinhas e símbolos fofos</li>
-                            <li>• Raças específicas e características únicas</li>
+                            <li>• Datas especiais (nascimento dos filhos/netos)</li>
+                            <li>• Frases marcantes que toda mãe fala</li>
+                            <li>• Fotos da família</li>
+                            <li>• Mensagens de amor dos filhos</li>
+                            <li>• Desenhos das crianças</li>
                         </ul>
                     </div>
 
                     <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
                         <div class="text-center mb-4">
                             <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="briefcase" class="h-8 w-8 text-blue-600"></i>
+                                <i data-lucide="users" class="h-8 w-8 text-blue-600"></i>
                             </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Profissões Especiais</h3>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Casais e Relacionamentos</h3>
                         </div>
                         <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Médicas, enfermeiras e profissionais da saúde</li>
-                            <li>• Professoras e educadoras</li>
-                            <li>• Advogadas e executivas</li>
-                            <li>• Símbolos e ferramentas da profissão</li>
-                            <li>• Frases motivacionais da área</li>
-                        </ul>
-                    </div>
-
-                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
-                        <div class="text-center mb-4">
-                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="star" class="h-8 w-8 text-purple-600"></i>
-                            </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Fé e Espiritualidade</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Nossa Senhora e santos de devoção</li>
-                            <li>• Versículos bíblicos especiais</li>
-                            <li>• Símbolos religiosos personalizados</li>
-                            <li>• Orações e mensagens de fé</li>
-                            <li>• Anjos e elementos celestiais</li>
+                            <li>• Data do primeiro encontro</li>
+                            <li>• Fotos do casal</li>
+                            <li>• Frases especiais entre vocês</li>
+                            <li>• Coordenadas de lugares importantes</li>
+                            <li>• Linha do tempo do relacionamento</li>
                         </ul>
                     </div>
 
                     <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
                         <div class="text-center mb-4">
                             <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="gamepad-2" class="h-8 w-8 text-green-600"></i>
+                                <i data-lucide="sparkles" class="h-8 w-8 text-green-600"></i>
                             </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Anime e Personagens</h3>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Motivacional</h3>
                         </div>
                         <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Personagens de anime favoritos</li>
-                            <li>• Desenhos animados clássicos</li>
-                            <li>• Filmes e séries que você ama</li>
-                            <li>• Logos e símbolos icônicos</li>
-                            <li>• Frases marcantes dos personagens</li>
+                            <li>• Frases inspiradoras personalizadas</li>
+                            <li>• Metas e objetivos</li>
+                            <li>• Versículos bíblicos</li>
+                            <li>• Mantras pessoais</li>
+                            <li>• Conquistas e vitórias</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="gift" class="h-8 w-8 text-purple-600"></i>
+                            </div>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Datas Especiais</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-burgundy-700">
+                            <li>• Aniversários únicos</li>
+                            <li>• Formaturas e conquistas</li>
+                            <li>• Aposentadoria</li>
+                            <li>• Nascimento de bebês</li>
+                            <li>• Bodas e aniversários de casamento</li>
                         </ul>
                     </div>
 
                     <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
                         <div class="text-center mb-4">
                             <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="palette" class="h-8 w-8 text-orange-600"></i>
+                                <i data-lucide="coffee" class="h-8 w-8 text-orange-600"></i>
                             </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Nomes e Monogramas</h3>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Profissional</h3>
                         </div>
                         <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Seu nome em tipografias exclusivas</li>
-                            <li>• Monogramas elegantes e sofisticados</li>
-                            <li>• Iniciais decorativas</li>
-                            <li>• Combinações de nomes especiais</li>
-                            <li>• Assinaturas personalizadas</li>
+                            <li>• Logo da empresa</li>
+                            <li>• Nome e cargo personalizado</li>
+                            <li>• Brindes corporativos</li>
+                            <li>• Eventos e convenções</li>
+                            <li>• Presentes para equipe</li>
                         </ul>
                     </div>
 
                     <div class="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg p-6">
                         <div class="text-center mb-4">
                             <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="sparkles" class="h-8 w-8 text-red-600"></i>
+                                <i data-lucide="palette" class="h-8 w-8 text-red-600"></i>
                             </div>
-                            <h3 class="text-burgundy-900 font-playfair font-semibold">Estampas Exclusivas</h3>
+                            <h3 class="text-burgundy-900 font-playfair font-semibold">Arte Personalizada</h3>
                         </div>
                         <ul class="space-y-2 text-sm text-burgundy-700">
-                            <li>• Florais delicados e modernos</li>
-                            <li>• Padrões geométricos únicos</li>
-                            <li>• Aquarelas e arte abstrata</li>
-                            <li>• Combinações de cores favoritas</li>
-                            <li>• Texturas e efeitos especiais</li>
+                            <li>• Ilustrações exclusivas</li>
+                            <li>• Retratos artísticos</li>
+                            <li>• Pets e animais de estimação</li>
+                            <li>• Paisagens especiais</li>
+                            <li>• Arte abstrata personalizada</li>
                         </ul>
                     </div>
                 </div>
@@ -794,24 +687,23 @@
             </div>
         </section>
 
-
         <!-- Final CTA Section -->
         <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-cta">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="flex flex-col items-center justify-center space-y-4 text-center">
                     <div class="space-y-2">
                         <h2 class="text-3xl font-bold tracking-tight sm:text-5xl font-playfair text-beige-50">
-                            Sua Rotina Merece Essa Transformação...
+                            Não Deixe Esse Momento Passar...
                         </h2>
                         <p class="max-w-2xl text-beige-100 text-xl">
-                            <strong>A organização muda tudo na sua vida.</strong> Que tal transformar sua rotina em algo 
-                            mais prático e estiloso? Sua necessaire personalizada está a apenas um clique de distância.
-                            <strong>Vamos organizar juntas?</strong>
+                            <strong>A vida é feita de momentos únicos.</strong> Que tal transformar o próximo em uma lembrança
+                            eterna? Sua caneca personalizada está a apenas um clique de distância.
+                            <strong>Vamos criar magia juntos?</strong>
                         </p>
                     </div>
                     <div class="flex flex-col gap-2 sm:flex-row">
                         <button class="h-12 px-8 bg-beige-50 hover:bg-beige-100 text-burgundy-900 shadow-lg rounded-md font-medium flex items-center justify-center">
-                            ✨ SIM! Quero Minha Necessaire Agora
+                            ❤️ SIM! Quero Criar Minha Caneca Agora
                             <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
                         </button>
                         <button class="h-12 px-8 border border-beige-50 text-beige-50 hover:bg-beige-50 hover:text-burgundy-900 rounded-md font-medium">
@@ -825,11 +717,11 @@
                         </div>
                         <div class="flex items-center space-x-1">
                             <i data-lucide="heart" class="h-4 w-4 text-red-400"></i>
-                            <span><strong>Qualidade</strong> 100% garantida</span>
+                            <span><strong>Satisfação</strong> 100% garantida</span>
                         </div>
                         <div class="flex items-center space-x-1">
                             <i data-lucide="sparkles" class="h-4 w-4 text-yellow-400"></i>
-                            <span><strong>Design</strong> exclusivo</span>
+                            <span><strong>Atendimento</strong> humanizado</span>
                         </div>
                     </div>
                     <p class="text-xs text-beige-300 max-w-md">
@@ -848,13 +740,13 @@
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2">
                         <div class="flex items-center justify-center w-8 h-8 bg-beige-50 rounded-lg">
-                            <i data-lucide="package" class="h-5 w-5 text-burgundy-900"></i>
+                            <i data-lucide="coffee" class="h-5 w-5 text-burgundy-900"></i>
                         </div>
                         <span class="text-xl font-bold font-playfair text-beige-50">MugCraft</span>
                     </div>
                     <p class="text-sm text-beige-200">
-                        <strong>Transformamos rotinas em experiências organizadas.</strong> Cada necessaire é feita com amor, 
-                        carinho e a dedicação de quem entende que organização é sinônimo de bem-estar.
+                        <strong>Transformamos momentos em lembranças eternas.</strong> Cada caneca é feita com amor, carinho e a
+                        dedicação de quem entende que os melhores presentes tocam o coração.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-beige-200 hover:text-beige-50">
@@ -874,9 +766,9 @@
                 <div class="space-y-4">
                     <h4 class="text-sm font-semibold text-beige-50">Nossos Produtos</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Necessaires Personalizadas</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Kits Organização</a></li>
-                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Necessaires Profissionais</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Canecas para Mães</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Canecas Motivacionais</a></li>
+                        <li><a href="#" class="text-beige-200 hover:text-beige-50">Kits Família</a></li>
                         <li><a href="#" class="text-beige-200 hover:text-beige-50">Brindes Corporativos</a></li>
                     </ul>
                 </div>
@@ -901,7 +793,7 @@
             </div>
             <div class="mt-8 pt-8 border-t border-burgundy-700">
                 <div class="flex flex-col sm:flex-row justify-between items-center">
-                    <p class="text-xs text-beige-200">© 2024 MugCraft. Feito com ❤️ para mulheres que se organizam com estilo.</p>
+                    <p class="text-xs text-beige-200">© 2024 MugCraft. Feito com ❤️ para famílias que se amam.</p>
                     <div class="flex space-x-4 mt-4 sm:mt-0">
                         <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Política de Privacidade</a>
                         <a href="#" class="text-xs text-beige-200 hover:text-beige-50">Termos de Uso</a>
@@ -912,7 +804,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JS -->
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
